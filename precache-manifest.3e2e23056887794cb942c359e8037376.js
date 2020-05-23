@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1220a830ddeea9ebb2133bb2e9e7c69b",
+    "revision": "830947df21704011341657b85b3a1659",
     "url": "/nsp2020nrw.gallery/index.html"
   },
   {
-    "revision": "61ee412103266b7971a2",
+    "revision": "fe3a1fcd5631fa213549",
     "url": "/nsp2020nrw.gallery/static/css/main.1ae5e3eb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nsp2020nrw.gallery/static/js/2.4fab9762.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "61ee412103266b7971a2",
-    "url": "/nsp2020nrw.gallery/static/js/main.baaee196.chunk.js"
+    "revision": "fe3a1fcd5631fa213549",
+    "url": "/nsp2020nrw.gallery/static/js/main.4a98128e.chunk.js"
   },
   {
     "revision": "0d5410364af07622a53c",
