@@ -7,6 +7,9 @@ import { loadedImages } from "../Map";
 import BackIcon from "../BackIcon";
 import artInfo from "./descriptions.json";
 
+const containerWidth = 655.9;
+const containerHeight = 637;
+const imageWidthPercent = 0.87;
 const Modal = ({ match }) => {
   const [loadingImg, setLoadingImg] = useState(true);
   const [imgSrc, setImgSrc] = useState("");
@@ -17,12 +20,24 @@ const Modal = ({ match }) => {
     image.addEventListener("load", () => {
       setLoadingImg(false);
       setImgSrc(image.src);
+      const resizedHeight =
+        (image.height * containerWidth * imageWidthPercent) / image.width;
+
+      if (resizedHeight > containerHeight) {
+        imgRef.current.style.marginTop = "";
+        const aspect = image.width / image.height;
+        imgRef.current.style.width = (containerHeight - 100) * aspect + "px";
+      } else {
+        imgRef.current.style.marginTop = `${
+          (containerHeight - resizedHeight) / 2
+        }px`;
+      }
+
       setTimeout(() => (imgRef.current.style.opacity = 1), 100);
     });
   }, []);
 
   const index = match.params.img;
-
   // artInfo is an object starting at 1
   const info = artInfo[parseInt(index) + 1];
 
