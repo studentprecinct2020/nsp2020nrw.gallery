@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nsp2020nrw.gallery/static/css/main.1afbea28.chunk.css",
-    "main.js": "/nsp2020nrw.gallery/static/js/main.5dd5e3d3.chunk.js",
-    "main.js.map": "/nsp2020nrw.gallery/static/js/main.5dd5e3d3.chunk.js.map",
+    "main.css": "/nsp2020nrw.gallery/static/css/main.a570943b.chunk.css",
+    "main.js": "/nsp2020nrw.gallery/static/js/main.9e052669.chunk.js",
+    "main.js.map": "/nsp2020nrw.gallery/static/js/main.9e052669.chunk.js.map",
     "runtime-main.js": "/nsp2020nrw.gallery/static/js/runtime-main.c3705b69.js",
     "runtime-main.js.map": "/nsp2020nrw.gallery/static/js/runtime-main.c3705b69.js.map",
-    "static/js/2.00a21dd6.chunk.js": "/nsp2020nrw.gallery/static/js/2.00a21dd6.chunk.js",
-    "static/js/2.00a21dd6.chunk.js.map": "/nsp2020nrw.gallery/static/js/2.00a21dd6.chunk.js.map",
+    "static/js/2.4fab9762.chunk.js": "/nsp2020nrw.gallery/static/js/2.4fab9762.chunk.js",
+    "static/js/2.4fab9762.chunk.js.map": "/nsp2020nrw.gallery/static/js/2.4fab9762.chunk.js.map",
     "index.html": "/nsp2020nrw.gallery/index.html",
-    "precache-manifest.9daf338fc730abd233cebe3c0910eabf.js": "/nsp2020nrw.gallery/precache-manifest.9daf338fc730abd233cebe3c0910eabf.js",
+    "precache-manifest.1104ce8e4bb83d7c46b0739752c679eb.js": "/nsp2020nrw.gallery/precache-manifest.1104ce8e4bb83d7c46b0739752c679eb.js",
     "service-worker.js": "/nsp2020nrw.gallery/service-worker.js",
-    "static/css/main.1afbea28.chunk.css.map": "/nsp2020nrw.gallery/static/css/main.1afbea28.chunk.css.map",
-    "static/js/2.00a21dd6.chunk.js.LICENSE.txt": "/nsp2020nrw.gallery/static/js/2.00a21dd6.chunk.js.LICENSE.txt",
+    "static/css/main.a570943b.chunk.css.map": "/nsp2020nrw.gallery/static/css/main.a570943b.chunk.css.map",
+    "static/js/2.4fab9762.chunk.js.LICENSE.txt": "/nsp2020nrw.gallery/static/js/2.4fab9762.chunk.js.LICENSE.txt",
     "static/media/1-smoll.jpg": "/nsp2020nrw.gallery/static/media/1-smoll.76edecab.jpg",
     "static/media/10-smoll.jpg": "/nsp2020nrw.gallery/static/media/10-smoll.71b50ff3.jpg",
     "static/media/2-smoll.jpg": "/nsp2020nrw.gallery/static/media/2-smoll.102f2ad5.jpg",
@@ -23,12 +23,14 @@
     "static/media/8-smoll.jpg": "/nsp2020nrw.gallery/static/media/8-smoll.3502ff7a.jpg",
     "static/media/9-smoll.jpg": "/nsp2020nrw.gallery/static/media/9-smoll.8eba5c41.jpg",
     "static/media/UoM_logo.svg": "/nsp2020nrw.gallery/static/media/UoM_logo.5ce5fc8f.svg",
-    "static/media/back_arrow.png": "/nsp2020nrw.gallery/static/media/back_arrow.0c3ef1f8.png"
+    "static/media/back_arrow.png": "/nsp2020nrw.gallery/static/media/back_arrow.0c3ef1f8.png",
+    "static/media/info.svg": "/nsp2020nrw.gallery/static/media/info.f9b66c28.svg",
+    "static/media/volume.svg": "/nsp2020nrw.gallery/static/media/volume.121235c0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c3705b69.js",
-    "static/js/2.00a21dd6.chunk.js",
-    "static/css/main.1afbea28.chunk.css",
-    "static/js/main.5dd5e3d3.chunk.js"
+    "static/js/2.4fab9762.chunk.js",
+    "static/css/main.a570943b.chunk.css",
+    "static/js/main.9e052669.chunk.js"
   ]
 }

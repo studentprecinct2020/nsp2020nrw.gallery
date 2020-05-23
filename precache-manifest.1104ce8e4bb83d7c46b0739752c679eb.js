@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b19395144e61799f833485aa5c3d2a97",
+    "revision": "7ec42c54f9aa2b3b0dcfffc690a9ce61",
     "url": "/nsp2020nrw.gallery/index.html"
   },
   {
-    "revision": "6f6d5bfdf693cf05cb06",
-    "url": "/nsp2020nrw.gallery/static/css/main.1afbea28.chunk.css"
+    "revision": "9df20d87cb35285ec6a9",
+    "url": "/nsp2020nrw.gallery/static/css/main.a570943b.chunk.css"
   },
   {
-    "revision": "9d49687b7d6e5bad8aee",
-    "url": "/nsp2020nrw.gallery/static/js/2.00a21dd6.chunk.js"
+    "revision": "c3d399d75d6b395be010",
+    "url": "/nsp2020nrw.gallery/static/js/2.4fab9762.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/nsp2020nrw.gallery/static/js/2.00a21dd6.chunk.js.LICENSE.txt"
+    "url": "/nsp2020nrw.gallery/static/js/2.4fab9762.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6f6d5bfdf693cf05cb06",
-    "url": "/nsp2020nrw.gallery/static/js/main.5dd5e3d3.chunk.js"
+    "revision": "9df20d87cb35285ec6a9",
+    "url": "/nsp2020nrw.gallery/static/js/main.9e052669.chunk.js"
   },
   {
     "revision": "0d5410364af07622a53c",
@@ -70,5 +70,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0c3ef1f80c1a307bc071668b2616f79a",
     "url": "/nsp2020nrw.gallery/static/media/back_arrow.0c3ef1f8.png"
+  },
+  {
+    "revision": "f9b66c28e6beb856f7db4dcbd58bb00e",
+    "url": "/nsp2020nrw.gallery/static/media/info.f9b66c28.svg"
+  },
+  {
+    "revision": "121235c0c0fe008577dd99e1bd756e91",
+    "url": "/nsp2020nrw.gallery/static/media/volume.121235c0.svg"
   }
 ]);
