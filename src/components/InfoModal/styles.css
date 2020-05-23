@@ -1,0 +1,33 @@
+.info-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #094183;
+  color: white;
+  font-size: 20px;
+  border: 3px solid black;
+  margin: 50px 70px;
+  width: 937px;
+  height: 637px;
+}
+.info-body {
+  position: relative;
+  height: 100%;
+}
+
+.info-text {
+  padding: 60px;
+}
+
+.logo-wrapper {
+  width: 130px;
+  margin: auto;
+}
+
+.back-wrapper {
+  position: absolute;
+  right: 30px;
+  bottom: 22px;
+}

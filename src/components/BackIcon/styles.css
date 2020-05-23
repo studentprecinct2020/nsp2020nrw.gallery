@@ -1,0 +1,15 @@
+.back-button {
+  background: white;
+  width: 50px;
+  border: 3px solid black;
+  cursor: pointer;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.back-button > img {
+  width: 60%;
+  margin: auto;
+  display: block;
+  padding: 10px;
+}

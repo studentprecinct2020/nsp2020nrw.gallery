@@ -1,0 +1,70 @@
+.gallery-container {
+  display: grid;
+  grid-template-areas:
+    "one four . . ."
+    "two five seven . ."
+    "three six eight nine ten";
+  width: 0%;
+  opacity: 0%;
+  transition: width 1s, opacity 1s;
+}
+
+.gallery-container div:hover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+span.beveled {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+span.beveled:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  width: 95.5%;
+  height: 91.2%;
+  border: 5px solid;
+  border-color: rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4)
+    rgba(255, 255, 255, 0.4);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
