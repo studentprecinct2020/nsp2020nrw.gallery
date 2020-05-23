@@ -25,6 +25,12 @@ const Modal = ({ match }) => {
     });
   }, []);
 
+  useEffect(() => {
+    if (imgSrc) {
+      document.getElementById("modal-image").className = "loaded";
+    }
+  }, [imgSrc]);
+
   const index = match.params.img;
 
   // artInfo is an object starting at 1
