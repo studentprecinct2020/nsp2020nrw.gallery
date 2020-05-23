@@ -23,7 +23,7 @@
   max-height: calc(637px - 100px);
 
   margin: 20px 30px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 2s;
 }
 

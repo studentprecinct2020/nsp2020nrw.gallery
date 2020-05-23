@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div>
       <Heading />
-      {/* <button onClick={() => setGallery(true)}>LOADGALLERY</button> */}
+      <button onClick={() => setGallery(true)}>LOADGALLERY</button>
       <Route path="/frog/:img" component={ImageModal} />
       <Route path="/info" component={InfoModal} />
       <Map setGallery={setGallery} />
