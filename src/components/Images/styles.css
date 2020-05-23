@@ -20,7 +20,7 @@
 span.beveled {
   position: relative;
   display: block;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 span.beveled:after {

@@ -3,6 +3,7 @@ import "./styles.css";
 import { loadedImages } from "../Map";
 import { withRouter } from "react-router-dom";
 import { numMap } from "./utils";
+import eye from "../../assets/icons/eye-smoll.png";
 
 const Images = ({ match, history, show }) => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const Images = ({ match, history, show }) => {
     gallery.style.left = "4%";
   }, [show]);
   return (
-    <div className="gallery-container">
+    <div className="gallery-container" style={{ cursor: `url(${eye}),auto` }}>
       {loadedImages.map((img, i) => {
         return (
           <div

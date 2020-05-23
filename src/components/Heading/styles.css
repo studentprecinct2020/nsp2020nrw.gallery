@@ -12,6 +12,7 @@
 .heading-container {
   padding: 10px;
   box-shadow: inset -3px -1px 8px black;
+  user-select: none;
 }
 .icon-container {
   float: right;
