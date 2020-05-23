@@ -13,6 +13,8 @@ export const loadedImages = images.map((i) => {
 const Map = ({ setGallery }) => {
   const [startAnimating, setStartAnimating] = useState(false);
 
+  const textContainerRef = useRef("");
+
   const typeWriterRefOne = useRef("");
   const typeWriterRefTwo = useRef("");
   const typeWriterRefThree = useRef("");
@@ -21,7 +23,7 @@ const Map = ({ setGallery }) => {
     var i = 0;
     var blocks = 0;
     var txt = "Acknowledgement of country "; /* The text */
-    var speed = 50; /* The speed/duration of the effect in milliseconds */
+    var speed = 10; /* The speed/duration of the effect in milliseconds */
 
     function typeWriter() {
       if (i < txt.length) {
@@ -38,6 +40,7 @@ const Map = ({ setGallery }) => {
           typeWriter();
         } else {
           setStartAnimating(true);
+          textContainerRef.current.className = "hide";
         }
       }
     }
@@ -47,7 +50,7 @@ const Map = ({ setGallery }) => {
   return (
     <div className="map-container">
       <MapArea startAnimating={startAnimating} setGallery={setGallery} />
-      <div id="text-container">
+      <div id="text-container" ref={textContainerRef}>
         <div className="tw-container left">
           <div className="one" ref={typeWriterRefOne}></div>
           <div className="two" ref={typeWriterRefTwo}></div>

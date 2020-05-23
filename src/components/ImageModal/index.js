@@ -10,6 +10,7 @@ import artInfo from "./descriptions.json";
 const containerWidth = 655.9;
 const containerHeight = 637;
 const imageWidthPercent = 0.87;
+const hPadding = 100;
 const Modal = ({ match }) => {
   const [loadingImg, setLoadingImg] = useState(true);
   const [imgSrc, setImgSrc] = useState("");
@@ -26,7 +27,8 @@ const Modal = ({ match }) => {
       if (resizedHeight > containerHeight) {
         imgRef.current.style.marginTop = "";
         const aspect = image.width / image.height;
-        imgRef.current.style.width = (containerHeight - 100) * aspect + "px";
+        imgRef.current.style.width =
+          (containerHeight - hPadding) * aspect + "px";
       } else {
         imgRef.current.style.marginTop = `${
           (containerHeight - resizedHeight) / 2
