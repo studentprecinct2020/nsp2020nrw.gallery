@@ -19,8 +19,9 @@
 }
 
 .image-container > img {
-  width: 86%;
-  height: auto;
+  width: 87%;
+  max-height: calc(637px - 100px);
+
   margin: 20px 30px;
   opacity: 0;
   transition: opacity 2s;
@@ -38,6 +39,14 @@
   font-weight: bold;
   margin: 15px auto 40px;
 }
+.description > .info {
+  overflow: auto;
+  height: 400px;
+  user-select: none;
+}
+.description > .info::-webkit-scrollbar {
+  display: none;
+}
 
 .close-modal {
   position: absolute;
@@ -47,10 +56,16 @@
   cursor: pointer;
 }
 
-.lds-ring {
-  width: 87%;
-  margin: 190px;
+.modal-loading {
   position: absolute;
+  left: 45%;
+  top: 36%;
+}
+
+.lds-ring {
+  /* width: 87%;
+  margin: 190px;
+  position: absolute; */
 }
 .lds-ring div {
   box-sizing: border-box;

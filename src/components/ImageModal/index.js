@@ -18,12 +18,12 @@ const Modal = ({ match }) => {
       while (elapsed < 1200) {
         elapsed = Date.now() - startTime;
       }
+      console.log(image.height);
       setLoadingImg(false);
     });
 
     const icon = document.querySelector("#back-icon-img");
     icon.addEventListener("load", () => {
-      console.log("icon loaded");
       setLoadingIcon(false);
     });
   });
@@ -37,7 +37,11 @@ const Modal = ({ match }) => {
   const src = loadedImages[index].src;
   return createPortal(
     <div className="modal">
-      {loadingImg | loadingIcon ? <Loading /> : null}
+      {loadingImg | loadingIcon ? (
+        <div className="modal-loading">
+          <Loading />
+        </div>
+      ) : null}
       <div
         className="view-pane"
         style={{ display: !loadingImg && !loadingIcon ? "grid" : "none" }}
@@ -52,10 +56,9 @@ const Modal = ({ match }) => {
         </div>
         <div className="description">
           <div className="header">
-            {info.artist}. {info.title} ({info.year}), digital image,
-            1650x700cm`
+            {info.artist}. {info.title} ({info.year}), digital image, 1650x700cm
           </div>
-          <div>{info.description}</div>
+          <div className="info">{info.description}</div>
         </div>
         <Link to="/">
           <div className="close-modal">

@@ -44,9 +44,11 @@
   left: 200px;
   top: 70px;
   position: absolute;
+  pointer-events: none;
 }
 
 .map-area > svg {
+  pointer-events: none;
 }
 
 .split #vic {
