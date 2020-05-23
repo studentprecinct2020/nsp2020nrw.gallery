@@ -5,7 +5,6 @@ import { withRouter } from "react-router-dom";
 import { numMap } from "./utils";
 
 const Images = ({ match, history, show }) => {
-  console.log(match.url);
   useEffect(() => {
     if (!show) return;
     const gallery = document.querySelector(".gallery-container");
