@@ -41,11 +41,12 @@
 
 .map-area {
   width: 70%;
-  margin: auto;
+  left: 200px;
+  top: 70px;
+  position: absolute;
 }
 
 .map-area > svg {
-  transform: translate(0px, -100px);
 }
 
 .split #vic {

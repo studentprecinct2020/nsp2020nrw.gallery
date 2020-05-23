@@ -2,6 +2,7 @@
   "name": "nrw",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cmngday123.github.io/nsp2020nrw.gallery",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -17,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "yarn build && copy build\\index.html build\\404.html",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

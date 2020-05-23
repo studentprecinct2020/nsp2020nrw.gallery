@@ -1,8 +1,10 @@
 import React from "react";
 import "./styles.css";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import SoundIcon from "../SoundIcon";
+import infoSVG from "../../assets/icons/info.svg";
 
-const Heading = () => {
+const Heading = ({ history }) => {
   return (
     <div>
       <div className="heading-outer">
@@ -11,12 +13,14 @@ const Heading = () => {
         </div>
       </div>
       <div className="icon-container">
-        <div className="icon sound">C</div>
-        <Link to="/info">
-          <div className="icon info">i</div>
-        </Link>
+        <div className="icon sound">
+          <SoundIcon />
+        </div>
+        <div onClick={() => history.push("/info")} className="icon info">
+          <img src={infoSVG} />
+        </div>
       </div>
     </div>
   );
 };
-export default Heading;
+export default withRouter(Heading);
