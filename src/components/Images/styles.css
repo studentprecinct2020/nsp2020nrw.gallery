@@ -6,7 +6,10 @@
     "three six eight nine ten";
   width: 0%;
   opacity: 0%;
-  transition: width 1s, opacity 1s;
+  transition: width 2s, opacity 1s, top 2s, left 2s;
+  position: absolute;
+  top: 63%;
+  left: 60%;
 }
 
 .gallery-container div:hover {

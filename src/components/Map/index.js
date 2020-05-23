@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
+import MapArea from "./MapArea";
 
 const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export const loadedImages = images.map((i) => {
@@ -9,7 +10,9 @@ export const loadedImages = images.map((i) => {
   return img;
 });
 
-const Map = () => {
+const Map = ({ setGallery }) => {
+  const [startAnimating, setStartAnimating] = useState(false);
+
   const typeWriterRefOne = useRef("");
   const typeWriterRefTwo = useRef("");
   const typeWriterRefThree = useRef("");
@@ -31,7 +34,11 @@ const Map = () => {
       } else {
         i = 0;
         blocks++;
-        if (blocks < 10) typeWriter();
+        if (blocks < 10) {
+          typeWriter();
+        } else {
+          setStartAnimating(true);
+        }
       }
     }
     typeWriter();
@@ -39,6 +46,7 @@ const Map = () => {
 
   return (
     <div className="map-container">
+      <MapArea startAnimating={startAnimating} setGallery={setGallery} />
       <div id="text-container">
         <div className="tw-container left">
           <div className="one" ref={typeWriterRefOne}></div>

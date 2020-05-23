@@ -8,8 +8,10 @@ const Images = ({ history, show }) => {
   useEffect(() => {
     if (!show) return;
     const gallery = document.querySelector(".gallery-container");
-    gallery.style.width = "100%";
+    gallery.style.width = "80%";
     gallery.style.opacity = "100%";
+    gallery.style.top = "15%";
+    gallery.style.left = "4%";
   }, [show]);
   return (
     <div className="gallery-container">
