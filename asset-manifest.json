@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nsp2020nrw.gallery/static/css/main.cfc9ab9f.chunk.css",
-    "main.js": "/nsp2020nrw.gallery/static/js/main.692f13dd.chunk.js",
-    "main.js.map": "/nsp2020nrw.gallery/static/js/main.692f13dd.chunk.js.map",
+    "main.css": "/nsp2020nrw.gallery/static/css/main.f8b063ee.chunk.css",
+    "main.js": "/nsp2020nrw.gallery/static/js/main.78563d3e.chunk.js",
+    "main.js.map": "/nsp2020nrw.gallery/static/js/main.78563d3e.chunk.js.map",
     "runtime-main.js": "/nsp2020nrw.gallery/static/js/runtime-main.c3705b69.js",
     "runtime-main.js.map": "/nsp2020nrw.gallery/static/js/runtime-main.c3705b69.js.map",
-    "static/js/2.d21c1f33.chunk.js": "/nsp2020nrw.gallery/static/js/2.d21c1f33.chunk.js",
-    "static/js/2.d21c1f33.chunk.js.map": "/nsp2020nrw.gallery/static/js/2.d21c1f33.chunk.js.map",
+    "static/js/2.29820bc3.chunk.js": "/nsp2020nrw.gallery/static/js/2.29820bc3.chunk.js",
+    "static/js/2.29820bc3.chunk.js.map": "/nsp2020nrw.gallery/static/js/2.29820bc3.chunk.js.map",
     "index.html": "/nsp2020nrw.gallery/index.html",
-    "precache-manifest.eb90c2d8431f3271ec6ed733ae498d7e.js": "/nsp2020nrw.gallery/precache-manifest.eb90c2d8431f3271ec6ed733ae498d7e.js",
+    "precache-manifest.d39a1baf8d9cb895851dca58592b2282.js": "/nsp2020nrw.gallery/precache-manifest.d39a1baf8d9cb895851dca58592b2282.js",
     "service-worker.js": "/nsp2020nrw.gallery/service-worker.js",
-    "static/css/main.cfc9ab9f.chunk.css.map": "/nsp2020nrw.gallery/static/css/main.cfc9ab9f.chunk.css.map",
-    "static/js/2.d21c1f33.chunk.js.LICENSE.txt": "/nsp2020nrw.gallery/static/js/2.d21c1f33.chunk.js.LICENSE.txt",
+    "static/css/main.f8b063ee.chunk.css.map": "/nsp2020nrw.gallery/static/css/main.f8b063ee.chunk.css.map",
+    "static/js/2.29820bc3.chunk.js.LICENSE.txt": "/nsp2020nrw.gallery/static/js/2.29820bc3.chunk.js.LICENSE.txt",
     "static/media/1-smoll.jpg": "/nsp2020nrw.gallery/static/media/1-smoll.57432526.jpg",
     "static/media/1.jpg": "/nsp2020nrw.gallery/static/media/1.98428504.jpg",
     "static/media/10-smoll.jpg": "/nsp2020nrw.gallery/static/media/10-smoll.07570d85.jpg",
@@ -39,8 +39,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3705b69.js",
-    "static/js/2.d21c1f33.chunk.js",
-    "static/css/main.cfc9ab9f.chunk.css",
-    "static/js/main.692f13dd.chunk.js"
+    "static/js/2.29820bc3.chunk.js",
+    "static/css/main.f8b063ee.chunk.css",
+    "static/js/main.78563d3e.chunk.js"
   ]
 }
