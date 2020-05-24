@@ -16,6 +16,6 @@ Run local dev server
 
 `npm run start`
 
-Wait for the code to compile...
+Wait for the code to compile... (it should only take 10 seconds or something)
 
 In a browser go to `http://localhost:3000`, and the app should be running
