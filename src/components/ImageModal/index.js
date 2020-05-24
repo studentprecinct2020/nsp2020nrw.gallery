@@ -21,6 +21,7 @@ const Modal = ({ match }) => {
   useEffect(() => {
     const image = new Image();
     image.src = loadedImages[index].src;
+    image.src = require(`../../assets/imgs/${parseInt(index) + 1}.jpg`);
     image.addEventListener("load", () => {
       setLoadingImg(false);
       setImgSrc(image.src);
