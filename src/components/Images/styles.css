@@ -10,6 +10,8 @@
   position: absolute;
   top: 63%;
   left: 60%;
+  grid-row-gap: 11px;
+  grid-column-gap: 21px;
 }
 
 .gallery-container div:hover {
@@ -34,6 +36,10 @@ span.beveled:after {
   border: 5px solid;
   border-color: rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4)
     rgba(255, 255, 255, 0.4);
+}
+
+span > img {
+  box-shadow: 6px 9px black;
 }
 
 @keyframes shake {

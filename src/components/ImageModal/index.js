@@ -15,6 +15,9 @@ const Modal = ({ match }) => {
   const [loadingImg, setLoadingImg] = useState(true);
   const [imgSrc, setImgSrc] = useState("");
   const imgRef = useRef();
+
+  const index = match.params.img;
+
   useEffect(() => {
     const image = new Image();
     image.src = loadedImages[index].src;
@@ -37,12 +40,17 @@ const Modal = ({ match }) => {
 
       setTimeout(() => (imgRef.current.style.opacity = 1), 100);
     });
-  }, []);
+  }, [index]);
 
-  const index = match.params.img;
   // artInfo is an object starting at 1
   const info = artInfo[parseInt(index) + 1];
-
+  const dLength = info.description.length;
+  const fontSize = () => {
+    if (dLength > 1200) {
+      return 11;
+    }
+    return 16;
+  };
   return createPortal(
     <div className="modal">
       {loadingImg && (
@@ -65,7 +73,9 @@ const Modal = ({ match }) => {
               {info.artist}. {info.title} ({info.year}), digital image,
               1650x700cm
             </div>
-            <div className="info">{info.description}</div>
+            <div className="info" style={{ fontSize: fontSize() }}>
+              {info.description}
+            </div>
           </div>
           <Link to="/">
             <div className="close-modal">

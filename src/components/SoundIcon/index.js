@@ -4,7 +4,7 @@ import soundSVG from "../../assets/icons/volume.svg";
 const SoundIcon = () => {
   return (
     <div>
-      <img src={soundSVG} />
+      <img src={soundSVG} alt="toot toot" />
     </div>
   );
 };

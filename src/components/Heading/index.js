@@ -9,7 +9,9 @@ const Heading = ({ history }) => {
     <div>
       <div className="heading-outer">
         <div className="heading-container">
-          <div>RECONCILIATION WEEK VIRTUAL GALLERY</div>
+          <marquee behavior="scroll">
+            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
+          </marquee>
         </div>
       </div>
       <div className="icon-container">
@@ -17,7 +19,7 @@ const Heading = ({ history }) => {
           <SoundIcon />
         </div>
         <div onClick={() => history.push("/info")} className="icon info">
-          <img src={infoSVG} />
+          <img src={infoSVG} alt="mhm" />
         </div>
       </div>
     </div>

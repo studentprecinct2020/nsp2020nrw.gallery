@@ -24,7 +24,6 @@
   font-size: 14px;
   position: relative;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 .tw-container.left {
@@ -62,27 +61,34 @@
   pointer-events: none;
 }
 
+#AUSTRALIA {
+  opacity: 0;
+}
+
+#vic,
+#wa,
+#qld,
+#NT,
+#sa {
+  transition: transform 1s;
+}
+
 .split #vic {
   transform: translate(3px, 30px);
-  transition: transform 1s;
 }
 
 .split #wa {
   transform: translate(-30px, 800px) scale(0.1, -0.1);
-  transition: transform 1s;
 }
 
 .split #qld {
   transform: translate(18px, -19px);
-  transition: transform 1s;
 }
 
 .split #NT {
   transform: translate(-4px, 2370px) scale(0.1, -0.1);
-  transition: transform 1s;
 }
 
 .split #sa {
   transform: translate(-20px, 486px) scale(0.1, -0.1);
-  transition: transform 1s;
 }

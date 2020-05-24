@@ -2,7 +2,12 @@ import React from "react";
 
 export function AustraliaMap() {
   return (
-    <svg x="0px" y="0px" viewBox="0 0 947.4 871.4">
+    <svg
+      x="0px"
+      y="0px"
+      viewBox="0 0 947.4 671.4"
+      style={{ overflow: "visible" }}
+    >
       <g id="AUSTRALIA">
         <path
           className="st0"

@@ -6,16 +6,17 @@ const MapArea = ({ setGallery, startAnimating }) => {
     if (!startAnimating) return;
     let frame;
     let counter = 0;
-    let wave = 1;
+    let wave = 0;
     const australia = document.getElementById("AUSTRALIA");
     const mapArea = document.querySelector(".map-area");
+    mapArea.classList.remove("split");
+
     const animate = () => {
-      if (wave > 0) {
-        wave = 0.5 * (0.8 + Math.cos(counter * Math.PI * 2 * 0.1));
+      if (wave < 1) {
+        wave = 0.5 * (1.2 + Math.sin(counter * Math.PI * 2 * 0.01));
         australia.style.opacity = wave;
         requestAnimationFrame(animate);
       } else {
-        mapArea.className += " split";
         setTimeout(() => {
           setGallery(true);
           mapArea.className += " hide";
@@ -23,11 +24,11 @@ const MapArea = ({ setGallery, startAnimating }) => {
       }
       counter++;
     };
-    animate();
+    setTimeout(() => animate(), 1000);
     return () => cancelAnimationFrame(frame);
-  }, [startAnimating]);
+  }, [setGallery, startAnimating]);
   return (
-    <div className="map-area">
+    <div className="map-area split">
       <AustraliaMap />
     </div>
   );

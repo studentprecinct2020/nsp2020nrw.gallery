@@ -9,7 +9,7 @@ const Main = () => {
   const [gallery, setGallery] = useState(false);
   return (
     <div>
-      <Heading />
+      {gallery && <Heading />}
       {/* <button onClick={() => setGallery(true)}>LOADGALLERY</button> */}
       <Route path="/frog/:img" component={ImageModal} />
       <Route path="/info" component={InfoModal} />

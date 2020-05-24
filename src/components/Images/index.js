@@ -15,7 +15,7 @@ const Images = ({ match, history, show }) => {
     gallery.style.left = "4%";
   }, [show]);
   return (
-    <div className="gallery-container" style={{ cursor: `url(${eye}),auto` }}>
+    <div className="gallery-container">
       {loadedImages.map((img, i) => {
         return (
           <div
@@ -23,7 +23,7 @@ const Images = ({ match, history, show }) => {
             style={{ gridArea: `${numMap[i + 1]}` }}
             key={`${i}image`}
           >
-            <span className="beveled">
+            <span className="beveled" style={{ cursor: `url(${eye}),auto` }}>
               <img id={`${i}image`} width="100%" src={img.src} alt="oops"></img>
             </span>
           </div>

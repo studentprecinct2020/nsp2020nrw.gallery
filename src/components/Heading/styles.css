@@ -4,16 +4,21 @@
   border: 3px solid black;
   text-align: center;
   font-size: 40px;
-  font-family: sans-serif;
   width: 80%;
-  box-shadow: 3px 3px black;
+  box-shadow: 6px 5px black;
 }
 
 .heading-container {
   padding: 10px;
   box-shadow: inset -3px -1px 8px black;
   user-select: none;
+  font-weight: 600;
 }
+
+.header-container > marquee {
+  line-height: 34px;
+}
+
 .icon-container {
   float: right;
   margin-right: 9.2%;
@@ -30,4 +35,5 @@
   margin: 0px 4px;
   cursor: pointer;
   padding: 10px;
+  box-shadow: 4px 5px black;
 }
