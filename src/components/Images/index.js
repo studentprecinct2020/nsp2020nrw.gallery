@@ -23,9 +23,13 @@ const Images = ({ match, history, show }) => {
             style={{ gridArea: `${numMap[i + 1]}` }}
             key={`${i}image`}
           >
-            <span className="beveled" style={{ cursor: `url(${eye}),auto` }}>
-              <img id={`${i}image`} width="100%" src={img.src} alt="oops"></img>
-            </span>
+            <img
+              style={{ cursor: `url(${eye}),auto` }}
+              id={`${i}image`}
+              width="100%"
+              src={img.src}
+              alt="oops"
+            ></img>
           </div>
         );
       })}

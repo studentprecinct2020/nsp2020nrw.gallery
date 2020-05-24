@@ -19,26 +19,7 @@
   animation-iteration-count: infinite;
 }
 
-span.beveled {
-  position: relative;
-  display: block;
-  /* cursor: pointer; */
-}
-
-span.beveled:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  content: "";
-  width: 95.5%;
-  height: 91.2%;
-  border: 5px solid;
-  border-color: rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4)
-    rgba(255, 255, 255, 0.4);
-}
-
-span > img {
+.gallery-container img {
   box-shadow: 6px 9px black;
 }
 
