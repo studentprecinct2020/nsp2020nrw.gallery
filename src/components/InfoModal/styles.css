@@ -1,14 +1,15 @@
 .info-modal {
   position: fixed;
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  margin-top: calc(-637px / 2);
+  margin-left: calc(-937px / 2);
   bottom: 0;
   right: 0;
   background-color: #094183;
   color: white;
   font-size: 20px;
   border: 3px solid black;
-  margin: 50px 70px;
   width: 937px;
   height: 637px;
 }
