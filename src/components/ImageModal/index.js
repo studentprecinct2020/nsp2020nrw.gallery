@@ -3,7 +3,6 @@ import { createPortal } from "react-dom";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import Loading from "../Loading";
-import { loadedImages } from "../Map";
 import BackIcon from "../BackIcon";
 import artInfo from "./descriptions.json";
 
@@ -20,7 +19,6 @@ const Modal = ({ match }) => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = loadedImages[index].src;
     image.src = require(`../../assets/imgs/${parseInt(index) + 1}.jpg`);
     image.addEventListener("load", () => {
       setLoadingImg(false);
