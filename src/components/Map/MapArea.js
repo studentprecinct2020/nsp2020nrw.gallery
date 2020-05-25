@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { AustraliaMap } from "../../assets/map/australiaMap2";
 
 // must match css
-const splitAnimationTime = 5000;
+const splitAnimationTime = 7000;
 
 const MapArea = ({ setGallery, startAnimating }) => {
   useEffect(() => {

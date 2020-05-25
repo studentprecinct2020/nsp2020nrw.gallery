@@ -10,7 +10,7 @@ export const loadedImages = images.map((i) => {
   return img;
 });
 
-const ackText = `We acknowled the Kulin Nations as sovereign custodians of the lands on which this virtual vallery emerged, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples. We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people.`;
+const ackText = `We acknowledge the Kulin Nations as sovereign custodians of the lands on which this virtual vallery emerged, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples. We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people.`;
 const Map = ({ setGallery }) => {
   const [startAnimating, setStartAnimating] = useState(false);
   const [showMap, setShowMap] = useState(false);
@@ -29,7 +29,7 @@ const Map = ({ setGallery }) => {
     var i = 0;
     var blocks = 0;
     var txt = ackText; /* The text */
-    var speed = 10; /* The speed/duration of the effect in milliseconds */
+    var speed = 50; /* The speed/duration of the effect in milliseconds */
 
     function typeWriter() {
       if (i < txt.length) {
