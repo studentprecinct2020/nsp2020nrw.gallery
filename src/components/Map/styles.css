@@ -71,6 +71,11 @@
   left: 60px;
 }
 
+.lottie-container {
+  width: 62%;
+  margin: auto;
+}
+
 .map-area {
   width: 55%;
   left: 24%;
@@ -135,5 +140,8 @@
   .map-area {
     width: 81%;
     left: 8%;
+  }
+  .lottie-container {
+    width: 92%;
   }
 }

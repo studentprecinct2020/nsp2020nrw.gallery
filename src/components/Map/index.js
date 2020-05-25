@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import Lottie from "react-lottie";
 import "./styles.css";
 import MapArea from "./MapArea";
+import animationData from "../../assets/mapAnimation.json";
 
 const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export const loadedImages = images.map((i) => {
@@ -10,9 +12,9 @@ export const loadedImages = images.map((i) => {
   return img;
 });
 
-const ackText = `We acknowledge the Kulin Nations as sovereign custodians of the lands on which this virtual vallery emerged, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples. We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people.`;
+const ackText = `We acknowledge the Kulin Nations as sovereign custodians of the lands on which this virtual gallery emerged, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples. We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people.`;
 const Map = ({ setGallery }) => {
-  const [startAnimating, setStartAnimating] = useState(false);
+  // const [startAnimating, setStartAnimating] = useState(false);
   const [showMap, setShowMap] = useState(false);
 
   const enterButton = useRef(null);
@@ -60,16 +62,33 @@ const Map = ({ setGallery }) => {
     textContainerRef.current.className = "hide";
   };
 
-  useEffect(() => {
-    if (showMap) {
-      setTimeout(() => setStartAnimating(true), 1000);
-    }
-  }, [showMap]);
+  // useEffect(() => {
+  //   if (showMap) {
+  //     setTimeout(() => setStartAnimating(true), 1000);
+  //   }
+  // }, [showMap]);
 
   return (
     <div className="map-container">
       <div style={{ display: showMap ? "block" : "none" }}>
-        <MapArea startAnimating={startAnimating} setGallery={setGallery} />
+        {/* <MapArea startAnimating={startAnimating} setGallery={setGallery} /> */}
+        <div className="lottie-container">
+          {showMap && (
+            <Lottie
+              options={{ animationData, autoplay: true, loop: false }}
+              eventListeners={[
+                {
+                  eventName: "complete",
+                  callback: () => {
+                    setGallery(true);
+                    document.querySelector(".map-container").style.display =
+                      "none";
+                  },
+                },
+              ]}
+            />
+          )}
+        </div>
       </div>
       <div id="text-container" ref={textContainerRef}>
         <div className="tw-container center" ref={typeWriterRefCenter}></div>

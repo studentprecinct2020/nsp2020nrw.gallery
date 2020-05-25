@@ -16,10 +16,10 @@ const Heading = ({ history }) => {
       </div>
       <div className="heading-outer">
         <div className="heading-container">
-          <span id="div0">
+          <div id="div0">
             NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
             <span style={{ color: "white" }}>_</span>
-          </span>
+          </div>
           <div id="div1">
             NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
             <span style={{ color: "white" }}>_</span>

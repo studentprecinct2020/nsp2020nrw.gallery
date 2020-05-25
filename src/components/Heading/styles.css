@@ -66,9 +66,9 @@
 }
 
 #div0 {
-  display: inline-block;
+  display: flex;
   color: black;
-  animation: marquee0 20s linear;
+  animation: marquee0 10s linear;
 }
 
 #div1 {
@@ -88,7 +88,7 @@
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 
