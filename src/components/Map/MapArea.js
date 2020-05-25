@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
-import { AustraliaMap } from "../../assets/map/australiaMap";
+import { AustraliaMap } from "../../assets/map/australiaMap2";
+
+// must match css
+const splitAnimationTime = 5000;
 
 const MapArea = ({ setGallery, startAnimating }) => {
   useEffect(() => {
@@ -7,14 +10,12 @@ const MapArea = ({ setGallery, startAnimating }) => {
     let frame;
     let counter = 0;
     let wave = 0;
-    const australia = document.getElementById("AUSTRALIA");
     const mapArea = document.querySelector(".map-area");
     mapArea.classList.remove("split");
 
     const animate = () => {
       if (wave < 1) {
         wave = 0.5 * (1.2 + Math.sin(counter * Math.PI * 2 * 0.01));
-        australia.style.opacity = wave;
         requestAnimationFrame(animate);
       } else {
         setTimeout(() => {
@@ -24,7 +25,9 @@ const MapArea = ({ setGallery, startAnimating }) => {
       }
       counter++;
     };
-    setTimeout(() => animate(), 1000);
+
+    setTimeout(() => animate(), splitAnimationTime);
+
     return () => cancelAnimationFrame(frame);
   }, [setGallery, startAnimating]);
   return (

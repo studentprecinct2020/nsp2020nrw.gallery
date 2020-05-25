@@ -59,3 +59,22 @@
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    /* display: grid; */
+    width: 0%;
+    opacity: 0%;
+    transition: width 2s, opacity 1s, top 2s, left 2s;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    margin-top: 200px;
+    margin: 200px auto;
+    position: relative;
+  }
+  .gallery-container img {
+    box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
+    width: 100%;
+  }
+}

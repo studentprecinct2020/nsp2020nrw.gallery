@@ -1,10 +1,21 @@
+.heading {
+  position: absolute;
+  background: #094183;
+  width: 100%;
+  /* height: 110%; */
+  /* margin: 0; */
+  top: 0;
+  left: 0;
+  display: inline-flex;
+}
+
 .heading-outer {
   background: white;
   margin: 20px auto;
   border: 3px solid black;
   text-align: center;
   font-size: 40px;
-  width: 95%;
+  width: 65%;
   /*max-width: 680px;*/
   box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
   position: relative;
@@ -19,17 +30,23 @@
   white-space: nowrap;
 }
 
+.umlogo-heading {
+  width: 72px;
+  margin-top: 22px;
+}
 .header-container > marquee {
   line-height: 34px;
 }
 
 .icon-container {
-  position: absolute;
+  /* position: absolute;
   right: -3px;
   top: 75px;
-  float: right;
+  float: right; */
   display: flex;
   user-select: none;
+  height: 58px;
+  margin: 26px 30px 0 -130px;
 }
 
 .icon-wrap {
@@ -48,6 +65,12 @@
   border: 5px outset #eaeaea;
 }
 
+#div0 {
+  display: inline-block;
+  color: black;
+  animation: marquee0 20s linear;
+}
+
 #div1 {
   display: inline-block;
   color: black;
@@ -58,6 +81,15 @@
   display: inline-block;
   animation: marquee2 20s linear infinite;
   animation-delay: 10s;
+}
+
+@keyframes marquee0 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }
 
 @keyframes marquee {
@@ -75,5 +107,18 @@
   }
   to {
     transform: translateX(-200%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon-container {
+    display: flex;
+    -webkit-user-select: none;
+    user-select: none;
+    height: 58px;
+    margin: 86px 30px 0 -130px;
+    position: absolute;
+    right: 0;
+    top: 30%;
   }
 }

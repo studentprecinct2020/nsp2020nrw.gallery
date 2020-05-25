@@ -12,18 +12,20 @@ const Images = ({ history, modalOpen, show }) => {
     gallery.style.width = "80%";
     gallery.style.opacity = "100%";
     gallery.style.top = "23%";
-    gallery.style.left = "4%";
+    gallery.style.left = window.innerWidth < 768 ? "0" : "4%";
   }, [show]);
+
+  const displayType = window.innerWidth < 768 ? "block" : "grid";
   return (
     <div
       className="gallery-container"
-      style={{ display: modalOpen ? "none" : "grid" }}
+      style={{ display: modalOpen ? "none" : displayType }}
     >
       {loadedImages.map((img, i) => {
         return (
           <div
             onClick={() => history.push(`/frog/${i}`)}
-            style={{ gridArea: `${numMap[i + 1]}` }}
+            style={{ gridArea: `${numMap[i + 1]}`, marginBottom: "20px" }}
             key={`${i}image`}
           >
             <img

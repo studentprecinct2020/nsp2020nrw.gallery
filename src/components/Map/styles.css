@@ -7,23 +7,50 @@
   animation-iteration-count: infinite;
 }
 
-#text-container {
+/* #text-container {
   display: flex;
   position: absolute;
   top: 80px;
   z-index: -1;
   transition: opacity;
+} */
+
+#text-container {
+  width: 100%;
 }
 
 #text-container.hide {
   opacity: 0;
+  display: none;
 }
 
-.tw-container {
+/* .tw-container {
   width: 460px;
   font-size: 14px;
   position: relative;
   font-weight: bold;
+} */
+.button-wrapper {
+  border: 3px solid black;
+  width: 142px;
+  margin: auto;
+  text-align: center;
+}
+.button {
+  background: white;
+  width: 91.8%;
+  cursor: pointer;
+  /* min-width: 50px; */
+  /* min-height: 50px; */
+  border: 5px outset #eaeaea;
+  box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
+  font-weight: 600;
+  font-style: italic;
+  padding: 1px;
+}
+
+.tw-container.center {
+  padding: 13% 13% 34px;
 }
 
 .tw-container.left {
@@ -45,8 +72,8 @@
 }
 
 .map-area {
-  width: 70%;
-  left: 200px;
+  width: 55%;
+  left: 24%;
   top: 70px;
   position: absolute;
   pointer-events: none;
@@ -69,10 +96,21 @@
 #wa,
 #qld,
 #NT,
+#NSW,
 #sa {
-  transition: transform 1s;
+  transition: transform 5s;
 }
 
+#NSW {
+  transform: translate(0px, -9px);
+}
+#qld {
+  transform: translate(-7px, 6px);
+}
+
+#vic {
+  transform: translate(-2px, -2.4px) rotate(-0.6deg);
+}
 .split #vic {
   transform: translate(3px, 30px);
 }
@@ -91,4 +129,11 @@
 
 .split #sa {
   transform: translate(-20px, 486px) scale(0.1, -0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .map-area {
+    width: 81%;
+    left: 8%;
+  }
 }
