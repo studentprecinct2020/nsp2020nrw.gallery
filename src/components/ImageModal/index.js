@@ -25,16 +25,17 @@ const Modal = ({ match }) => {
       setImgSrc(image.src);
       const resizedHeight =
         (image.height * containerWidth * imageWidthPercent) / image.width;
+      const aspect = image.width / image.height;
 
       if (resizedHeight > containerHeight) {
         imgRef.current.style.marginTop = "";
-        const aspect = image.width / image.height;
         imgRef.current.style.width =
           (containerHeight - hPadding) * aspect + "px";
       } else {
         imgRef.current.style.marginTop = `${
           (containerHeight - resizedHeight) / 2
         }px`;
+        imgRef.current.style.width = resizedHeight * aspect + "px";
       }
 
       setTimeout(() => (imgRef.current.style.opacity = 1), 100);
@@ -52,37 +53,39 @@ const Modal = ({ match }) => {
   };
   return createPortal(
     <div className="modal">
-      {loadingImg && (
-        <div className="modal-loading">
-          <Loading />
-        </div>
-      )}
-      {!loadingImg && (
-        <div className="view-pane">
-          <div className="image-container">
-            <img
-              ref={imgRef}
-              id="modal-image"
-              src={imgSrc}
-              alt={"no koala for you"}
-            ></img>
+      <div className="modal-wrap">
+        {loadingImg && (
+          <div className="modal-loading">
+            <Loading />
           </div>
-          <div className="description">
-            <div className="header">
-              {info.artist}. {info.title} ({info.year}), digital image,
-              1650x700cm
+        )}
+        {!loadingImg && (
+          <div className="view-pane">
+            <div className="image-container">
+              <img
+                ref={imgRef}
+                id="modal-image"
+                src={imgSrc}
+                alt={"no koala for you"}
+              ></img>
             </div>
-            <div className="info" style={{ fontSize: fontSize() }}>
-              {info.description}
+            <div className="description">
+              <div className="header">
+                {info.artist}. {info.title} ({info.year}), digital image,
+                1650x700cm
+              </div>
+              <div className="info" style={{ fontSize: fontSize() }}>
+                {info.description}
+              </div>
             </div>
+            <Link to="/">
+              <div className="close-modal">
+                <BackIcon />
+              </div>
+            </Link>
           </div>
-          <Link to="/">
-            <div className="close-modal">
-              <BackIcon />
-            </div>
-          </Link>
-        </div>
-      )}
+        )}
+      </div>
     </div>,
     document.getElementById("modal-root")
   );

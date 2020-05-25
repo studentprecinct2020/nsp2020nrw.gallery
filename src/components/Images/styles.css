@@ -20,7 +20,8 @@
 }
 
 .gallery-container img {
-  box-shadow: 6px 9px black;
+  box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
+  width: 80%;
 }
 
 @keyframes shake {

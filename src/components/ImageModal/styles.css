@@ -14,13 +14,19 @@
   height: 637px;
 }
 
+.modal-wrap {
+  border: 5px outset #eaeaea;
+  height: 99%;
+}
+
 .view-pane {
   display: grid;
   grid-template-columns: 70% 30%;
 }
 
 .image-container > img {
-  width: 87%;
+  /* width: 87%; */
+  /* height: 100%; */
   max-height: calc(637px - 100px);
   margin: 20px 30px;
   opacity: 0;

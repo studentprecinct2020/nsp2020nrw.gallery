@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 import MapArea from "./MapArea";
+
 const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export const loadedImages = images.map((i) => {
   const src = require(`../../assets/imgs/${i}-smoll.jpg`);

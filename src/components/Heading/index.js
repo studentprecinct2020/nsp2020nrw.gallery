@@ -9,17 +9,30 @@ const Heading = ({ history }) => {
     <div>
       <div className="heading-outer">
         <div className="heading-container">
-          <marquee behavior="scroll">
+          <div id="div1">
             NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-          </marquee>
+            <span style={{ color: "white" }}>_</span>
+          </div>
+          <div id="div2">
+            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
+            <span style={{ color: "white" }}>_</span>
+          </div>
         </div>
-      </div>
-      <div className="icon-container">
-        <div className="icon sound">
-          <SoundIcon />
-        </div>
-        <div onClick={() => history.push("/info")} className="icon info">
-          <img src={infoSVG} alt="mhm" />
+        <div className="icon-container">
+          <div className="icon-wrap">
+            <div className="icon sound">
+              <SoundIcon />
+            </div>
+          </div>
+          <div
+            className="icon-wrap"
+            onClick={() => history.push("/info")}
+            style={{ marginLeft: 11 }}
+          >
+            <div className="icon info">
+              <img src={infoSVG} alt="mhm" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

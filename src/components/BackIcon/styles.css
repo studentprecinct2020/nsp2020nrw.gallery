@@ -5,7 +5,8 @@
   cursor: pointer;
   min-width: 50px;
   min-height: 50px;
-  box-shadow: 6px 6px black;
+  border: 5px outset #eaeaea;
+  box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
 }
 
 .back-button > img {
