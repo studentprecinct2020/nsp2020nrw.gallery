@@ -2,6 +2,7 @@ html {
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
   background: linear-gradient(
     180deg,
     rgba(252, 30, 29, 1) 0%,

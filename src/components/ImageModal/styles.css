@@ -27,7 +27,9 @@
 .image-container > img {
   /* width: 87%; */
   /* height: 100%; */
-  max-height: calc(637px - 100px);
+  /*max-height: calc(637px - 100px);*/
+  size: 100%;
+  max-width: 78%;
   margin: 20px 30px;
   opacity: 0;
   transition: opacity 2s;
@@ -38,12 +40,12 @@
 }
 
 .description {
-  width: 90%;
-  margin: 3px -6px;
+  width: 100%;
+  margin: 3px -28%;
 }
 .description > .header {
   font-weight: bold;
-  margin: 15px auto 40px;
+  margin: 15px auto 20px;
 }
 .description > .info {
   overflow: auto;
