@@ -7,13 +7,14 @@ import Heading from "../components/Heading";
 import Images from "../components/Images";
 const Main = ({ location }) => {
   const [gallery, setGallery] = useState(false);
+  const [playMusic, setPlayMusic] = useState(false);
   const modalOpen = location.pathname !== "/";
   return (
     <div>
-      {/* {gallery && !modalOpen && <Heading />} */}
+      <Heading playMusic={playMusic} setPlayMusic={setPlayMusic} />
       <Route path="/frog/:img" component={ImageModal} />
       <Route path="/info" component={InfoModal} />
-      <Map setGallery={setGallery} />
+      <Map setGallery={setGallery} setPlayMusic={setPlayMusic} />
       <Images modalOpen={modalOpen} show={gallery} />
     </div>
   );

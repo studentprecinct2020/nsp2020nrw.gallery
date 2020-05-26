@@ -7,12 +7,19 @@
   width: 0%;
   opacity: 0%;
   transition: width 2s, opacity 1s, top 2s, left 2s;
-  /* position: absolute; */
+  position: absolute;
   top: 63%;
   left: 60%;
   grid-row-gap: 11px;
   grid-column-gap: 21px;
   margin-top: 90px;
+  margin-left: 90px;
+
+  display: flex;
+  width: 2960px;
+  top: 23%;
+  left: -1000px;
+  pointer-events: none;
 }
 
 .gallery-container div:hover {
