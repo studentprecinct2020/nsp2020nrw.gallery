@@ -1,37 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 import { withRouter } from "react-router-dom";
-import SoundIcon from "../SoundIcon";
 import infoSVG from "../../assets/icons/info.svg";
+import volUp from "../../assets/icons/vol_up.svg";
+import volOff from "../../assets/icons/vol_off.svg";
+import music from "../../assets/audio/music.mp3";
 import UoMLogo from "../UoMLogo";
 
-const Heading = ({ history }) => {
+const Heading = ({ history, playMusic, setPlayMusic }) => {
+  const [musicOn, setMusicOn] = useState(false);
+  const audioRef = useRef();
+  const toggleMusic = () => setPlayMusic(!playMusic);
+
   useEffect(() => {
-    setTimeout(() => document.getElementById("div0").remove(), 10000);
-  }, []);
+    if (playMusic) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [playMusic]);
+
   return (
     <div className="heading">
       <div className="umlogo-heading">
         <UoMLogo />
       </div>
-      <div className="heading-outer">
-        <div className="heading-container">
-          <div id="div0">
-            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-            <span style={{ color: "white" }}>_</span>
-          </div>
-          <div id="div1">
-            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-            <span style={{ color: "white" }}>_</span>
-          </div>
-          <div id="div2">
-            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-            <span style={{ color: "white" }}>_</span>
-          </div>
+      <div className="right">
+        National Reconciliation Week 2020 Virtual Gallery
+        {/* <div className="icon-container"> */}
+        <img
+          style={{ cursor: "pointer" }}
+          src={infoSVG}
+          onClick={() => history.push("/info")}
+        />
+        <div onClick={toggleMusic} style={{ cursor: "pointer" }}>
+          {!playMusic ? <img src={volUp} /> : <img src={volOff} />}
         </div>
-      </div>
-      <div className="icon-container">
-        <div className="icon-wrap">
+        <audio ref={audioRef} src={music} />
+        {/* <div className="icon-wrap">
           <div className="icon sound">
             <SoundIcon />
           </div>
@@ -44,7 +50,8 @@ const Heading = ({ history }) => {
           <div className="icon info">
             <img src={infoSVG} alt="mhm" />
           </div>
-        </div>
+        </div>*/}
+        {/* </div> */}
       </div>
     </div>
   );

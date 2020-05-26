@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Lottie from "react-lottie";
 import "./styles.css";
 import MapArea from "./MapArea";
-import animationData from "../../assets/mapAnimation.json";
+import animationData from "../../assets/animations/mapAnimation.json";
 
 const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export const loadedImages = images.map((i) => {
@@ -13,7 +13,7 @@ export const loadedImages = images.map((i) => {
 });
 
 const ackText = `We acknowledge the Kulin Nations as sovereign custodians of the lands on which this virtual gallery emerged, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples. We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people.`;
-const Map = ({ setGallery }) => {
+const Map = ({ setGallery, setPlayMusic }) => {
   // const [startAnimating, setStartAnimating] = useState(false);
   const [showMap, setShowMap] = useState(false);
 
@@ -59,6 +59,7 @@ const Map = ({ setGallery }) => {
 
   const enter = () => {
     setShowMap(true);
+    setPlayMusic(true);
     textContainerRef.current.className = "hide";
   };
 
@@ -98,7 +99,7 @@ const Map = ({ setGallery }) => {
           style={{ display: "none" }}
         >
           <div className="button" onClick={enter}>
-            CLICK TO ENTER
+            Enter Gallery
           </div>
         </div>
         <div className="tw-container left">

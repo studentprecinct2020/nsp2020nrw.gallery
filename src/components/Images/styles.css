@@ -12,6 +12,14 @@
   left: 60%;
   grid-row-gap: 11px;
   grid-column-gap: 21px;
+  margin-top: 90px;
+  margin-left: 90px;
+
+  display: flex;
+  width: 2960px;
+  top: 23%;
+  left: -1000px;
+  pointer-events: none;
 }
 
 .gallery-container div:hover {

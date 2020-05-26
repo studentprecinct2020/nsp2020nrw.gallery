@@ -1,5 +1,6 @@
 .map-container {
   background-color: none;
+  overflow-y: hidden;
 }
 
 .map-container > img:hover {
@@ -32,25 +33,29 @@
 } */
 .button-wrapper {
   border: 3px solid black;
-  width: 142px;
-  margin: auto;
+  width: 194.5px;
+  margin: 15px auto;
   text-align: center;
 }
 .button {
   background: white;
-  width: 91.8%;
+  width: 182px;
   cursor: pointer;
   /* min-width: 50px; */
   /* min-height: 50px; */
   border: 5px outset #eaeaea;
   box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
   padding: 1px;
+  font-size: 25px;
 }
 
 .tw-container.center {
   padding: 13% 13% 34px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .tw-container.left {
@@ -72,8 +77,8 @@
 }
 
 .lottie-container {
-  width: 62%;
-  margin: auto;
+  width: 52%;
+  margin: 20px auto 0;
 }
 
 .map-area {
