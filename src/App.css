@@ -10,6 +10,7 @@ html {
     rgba(253, 191, 45, 1) 50%,
     rgba(19, 18, 18, 1) 95%
   ) !important;
+  overflow: hidden;
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -29,8 +30,4 @@ body {
   html {
     overflow: hidden;
   }
-}
-
-.uomcontent {
-  background: none;
 }

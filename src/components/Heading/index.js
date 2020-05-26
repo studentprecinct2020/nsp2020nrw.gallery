@@ -22,12 +22,17 @@ const Heading = ({ history, playMusic, setPlayMusic }) => {
 
   return (
     <div className="heading">
-      <div className="umlogo-heading">
+      <div
+        className="umlogo-heading"
+        onClick={() =>
+          (window.location.href =
+            "https://students.unimelb.edu.au/student-precinct/home ")
+        }
+      >
         <UoMLogo />
       </div>
       <div className="right">
         National Reconciliation Week 2020 Virtual Gallery
-        {/* <div className="icon-container"> */}
         <img
           style={{ cursor: "pointer" }}
           src={infoSVG}
@@ -37,21 +42,6 @@ const Heading = ({ history, playMusic, setPlayMusic }) => {
           {!playMusic ? <img src={volOff} /> : <img src={volUp} />}
         </div>
         <audio ref={audioRef} src={music} />
-        {/* <div className="icon-wrap">
-          <div className="icon sound">
-            <SoundIcon />
-          </div>
-        </div>
-        <div
-          className="icon-wrap"
-          onClick={() => history.push("/info")}
-          style={{ marginLeft: 11 }}
-        >
-          <div className="icon info">
-            <img src={infoSVG} alt="mhm" />
-          </div>
-        </div>*/}
-        {/* </div> */}
       </div>
     </div>
   );

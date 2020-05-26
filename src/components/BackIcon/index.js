@@ -1,5 +1,5 @@
 import React from "react";
-import backImg from "../../assets/icons/back_arrow.png";
+import backImg from "../../assets/icons/keyboard_return.svg";
 import "./styles.css";
 import { withRouter } from "react-router-dom";
 

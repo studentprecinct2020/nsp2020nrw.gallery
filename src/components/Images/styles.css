@@ -20,9 +20,10 @@
   top: 23%;
   left: -1000px;
   pointer-events: none;
+  overflow-x: hideden;
 }
 
-.gallery-container div:hover {
+.gallery-container img:hover {
   animation: shake 1s;
   animation-iteration-count: once;
 }

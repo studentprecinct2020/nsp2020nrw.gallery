@@ -15,11 +15,17 @@ const Modal = ({ match }) => {
   const [imgSrc, setImgSrc] = useState("");
   const imgRef = useRef();
 
-  const index = match.params.img;
-
+  const path = match.params.img;
+  let index;
+  Object.keys(artInfo).forEach((key) => {
+    if (artInfo[key].path === path) {
+      index = key;
+    }
+  });
+  console.log(index);
   useEffect(() => {
     const image = new Image();
-    image.src = require(`../../assets/imgs/${parseInt(index) + 1}.jpg`);
+    image.src = require(`../../assets/imgs/${index}.jpg`);
     image.addEventListener("load", () => {
       setLoadingImg(false);
       setImgSrc(image.src);
@@ -42,7 +48,7 @@ const Modal = ({ match }) => {
   }, [index]);
 
   // artInfo is an object starting at 1
-  const info = artInfo[parseInt(index) + 1];
+  const info = artInfo[index];
   const dLength = info.description.length;
   const fontSize = () => {
     if (dLength > 1200) {

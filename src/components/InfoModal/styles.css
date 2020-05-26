@@ -32,8 +32,8 @@
 
 .back-wrapper {
   position: absolute;
-  right: 30px;
-  bottom: 22px;
+  right: 8px;
+  bottom: 0px;
 }
 
 @media screen and (max-width: 768px) {

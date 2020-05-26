@@ -38,6 +38,7 @@
 .umlogo-heading {
   width: 72px;
   margin: 6px 24px;
+  cursor: pointer;
 }
 .header-container > marquee {
   line-height: 34px;

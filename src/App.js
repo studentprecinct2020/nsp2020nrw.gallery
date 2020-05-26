@@ -1,11 +1,15 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import InfoModal from "./components/InfoModal";
 import Main from "./views/Main";
 import "./App.css";
 function App() {
   return (
     <Router basename="/">
-      <Route path="/" component={Main} />
+      <Switch>
+        <Route path="/info" exact component={InfoModal} />
+        <Route path="/" component={Main} />
+      </Switch>
     </Router>
   );
 }

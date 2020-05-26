@@ -12,8 +12,7 @@ const Main = ({ location }) => {
   return (
     <div>
       <Heading playMusic={playMusic} setPlayMusic={setPlayMusic} />
-      <Route path="/frog/:img" component={ImageModal} />
-      <Route path="/info" component={InfoModal} />
+      <Route path="/:img" component={ImageModal} />
       <Map setGallery={setGallery} setPlayMusic={setPlayMusic} />
       <Images modalOpen={modalOpen} show={gallery} />
     </div>

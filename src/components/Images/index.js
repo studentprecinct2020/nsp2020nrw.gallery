@@ -12,7 +12,7 @@ const Images = ({ history, modalOpen, show }) => {
     // gallery.style.width = "80%";
     gallery.style.width = "2960px";
     gallery.style.opacity = "100%";
-    gallery.style.top = "23%";
+    // gallery.style.top = "23%";
     // gallery.style.left = window.innerWidth < 768 ? "0" : "4%";
     gallery.style.left = "-1000px";
     gallery.style.transform = "translateX(10px)";
@@ -56,7 +56,6 @@ const Images = ({ history, modalOpen, show }) => {
 
   const displayType = window.innerWidth < 768 ? "block" : "flex";
   return (
-    // <div style={{ position: "relative", height: "640px" }}>
     <div
       className="gallery-container"
       style={{ display: modalOpen ? "none" : displayType }}
@@ -64,8 +63,12 @@ const Images = ({ history, modalOpen, show }) => {
       {loadedImages.map((img, i) => {
         return (
           <div
-            onClick={() => history.push(`/frog/${i}`)}
-            style={{ gridArea: `${numMap[i + 1]}`, marginBottom: "20px" }}
+            onClick={() => history.push(`/${img.path}`)}
+            style={{
+              gridArea: `${numMap[i + 1]}`,
+              marginBottom: "20px",
+              transform: `translateY(${getRandomInt(-100, 100)}px)`,
+            }}
             key={`${i}image`}
             className="image-wrap"
           >
@@ -73,14 +76,19 @@ const Images = ({ history, modalOpen, show }) => {
               style={{ cursor: `url(${eye}),auto` }}
               id={`${i}image`}
               width="100%"
-              src={img.src}
+              src={img.img.src}
               alt="oops"
             ></img>
           </div>
         );
       })}
     </div>
-    // </div>
   );
 };
 export default withRouter(Images);
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
