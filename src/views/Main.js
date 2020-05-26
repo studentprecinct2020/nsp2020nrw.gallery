@@ -10,7 +10,7 @@ const Main = ({ location }) => {
   const modalOpen = location.pathname !== "/";
   return (
     <div>
-      {gallery && !modalOpen && <Heading />}
+      {/* {gallery && !modalOpen && <Heading />} */}
       <Route path="/frog/:img" component={ImageModal} />
       <Route path="/info" component={InfoModal} />
       <Map setGallery={setGallery} />

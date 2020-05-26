@@ -6,29 +6,15 @@ import infoSVG from "../../assets/icons/info.svg";
 import UoMLogo from "../UoMLogo";
 
 const Heading = ({ history }) => {
-  useEffect(() => {
-    setTimeout(() => document.getElementById("div0").remove(), 10000);
-  }, []);
   return (
     <div className="heading">
       <div className="umlogo-heading">
         <UoMLogo />
       </div>
       <div className="heading-outer">
-        <div className="heading-container">
-          <div id="div0">
-            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-            <span style={{ color: "white" }}>_</span>
-          </div>
-          <div id="div1">
-            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-            <span style={{ color: "white" }}>_</span>
-          </div>
-          <div id="div2">
-            NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
-            <span style={{ color: "white" }}>_</span>
-          </div>
-        </div>
+        {/* <div className="heading-container"> */}
+        NATIONAL RECONCILIATION WEEK 2020 VIRTUAL GALLERY
+        {/* </div> */}
       </div>
       <div className="icon-container">
         <div className="icon-wrap">

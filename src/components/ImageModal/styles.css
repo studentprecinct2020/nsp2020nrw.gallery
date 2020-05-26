@@ -1,9 +1,9 @@
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: calc(-637px / 2);
-  margin-left: calc(-937px / 2);
+  /*position: fixed; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* margin-top: calc(-637px / 2); */
+  /* margin-left: calc(-937px / 2); */
   bottom: 0;
   right: 0;
   background-color: white;
@@ -11,12 +11,14 @@
   font-size: 20px;
   border: 3px solid black;
   width: 937px;
-  height: 637px;
+  height: 652px;
+  margin: 31px auto;
+  position: relative;
 }
 
 .modal-wrap {
   border: 5px outset #eaeaea;
-  height: 99%;
+  height: 100%;
 }
 
 .view-pane {

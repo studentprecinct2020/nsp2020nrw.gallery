@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Lottie from "react-lottie";
 import "./styles.css";
 import MapArea from "./MapArea";
-import animationData from "../../assets/mapAnimation.json";
+import animationData from "../../assets/animations/mapAnimation.json";
 
 const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export const loadedImages = images.map((i) => {
