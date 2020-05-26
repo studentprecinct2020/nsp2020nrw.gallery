@@ -34,7 +34,7 @@ const Heading = ({ history, playMusic, setPlayMusic }) => {
           onClick={() => history.push("/info")}
         />
         <div onClick={toggleMusic} style={{ cursor: "pointer" }}>
-          {!playMusic ? <img src={volUp} /> : <img src={volOff} />}
+          {!playMusic ? <img src={volOff} /> : <img src={volUp} />}
         </div>
         <audio ref={audioRef} src={music} />
         {/* <div className="icon-wrap">
