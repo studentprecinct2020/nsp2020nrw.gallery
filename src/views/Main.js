@@ -9,10 +9,14 @@ const Main = ({ location }) => {
   const [gallery, setGallery] = useState(false);
   const [playMusic, setPlayMusic] = useState(false);
   const modalOpen = location.pathname !== "/";
+
   return (
     <div>
       <Heading playMusic={playMusic} setPlayMusic={setPlayMusic} />
-      <Route path="/:img" component={ImageModal} />
+      <Route path="/info" exact component={InfoModal} />
+      {location.pathname !== "/info" && (
+        <Route path="/:img" component={ImageModal} />
+      )}
       <Map setGallery={setGallery} setPlayMusic={setPlayMusic} />
       <Images modalOpen={modalOpen} show={gallery} />
     </div>

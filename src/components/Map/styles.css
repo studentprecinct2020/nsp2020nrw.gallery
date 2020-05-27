@@ -149,4 +149,7 @@
   .lottie-container {
     width: 92%;
   }
+  .tw-container.center {
+    font-size: 20px;
+  }
 }

@@ -134,4 +134,8 @@
     right: 0;
     top: 30%;
   }
+  .right {
+    font-size: 10px;
+    margin-right: 18px;
+  }
 }

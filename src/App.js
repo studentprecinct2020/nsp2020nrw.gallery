@@ -7,7 +7,7 @@ function App() {
   return (
     <Router basename="/">
       <Switch>
-        <Route path="/info" exact component={InfoModal} />
+        {/* <Route path="/info" exact component={InfoModal} /> */}
         <Route path="/" component={Main} />
       </Switch>
     </Router>

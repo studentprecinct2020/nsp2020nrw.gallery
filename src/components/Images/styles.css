@@ -1,26 +1,27 @@
 .gallery-container {
-  display: grid;
+  /* display: grid;
   grid-template-areas:
     "one four . . ."
     "two five seven . ."
-    "three six eight nine ten";
+    "three six eight nine ten"; */
   width: 0%;
   opacity: 0%;
   transition: width 2s, opacity 1s, top 2s, left 2s;
-  position: absolute;
+  /* position: absolute;
   top: 63%;
-  left: 60%;
+  left: 60%; */
   grid-row-gap: 11px;
   grid-column-gap: 21px;
-  margin-top: 90px;
-  margin-left: 90px;
+  /* margin-top: 90px;
+  margin-left: 90px; */
 
   display: flex;
-  width: 2960px;
+  /* width: 2960px;
   top: 23%;
-  left: -1000px;
+  left: -1000px; */
   pointer-events: none;
-  overflow-x: hideden;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .gallery-container img:hover {
@@ -30,7 +31,12 @@
 
 .gallery-container img {
   box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
-  width: 80%;
+  width: 250px;
+  /* position: absolute; */
+}
+
+.image-wrap {
+  position: absolute;
 }
 
 @keyframes shake {
@@ -73,17 +79,27 @@
   .gallery-container {
     /* display: grid; */
     width: 0%;
+    height: 100%;
     opacity: 0%;
     transition: width 2s, opacity 1s, top 2s, left 2s;
     /* position: absolute; */
     top: 0;
     left: 0;
-    margin-top: 200px;
-    margin: 200px auto;
+    /* margin-top: 200px;
+    margin: 200px auto; */
+    position: relative;
+    /* display: flex; */
+    overflow: auto;
+    margin-top: 100px;
+  }
+  .image-wrap {
+    height: 100%;
+    width: 100%;
     position: relative;
   }
   .gallery-container img {
     box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
-    width: 100%;
+    /* height: 100%; */
+    position: inherit;
   }
 }
