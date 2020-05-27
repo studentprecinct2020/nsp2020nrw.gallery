@@ -47,7 +47,11 @@ const Map = ({
         // typeWriterRefOne.current.innerHTML += txt.charAt(i);
         // typeWriterRefTwo.current.innerHTML += txt.charAt(i);
         // typeWriterRefThree.current.innerHTML += txt.charAt(i);
-        typeWriterRefCenter.current.innerHTML += txt.charAt(i);
+        try {
+          typeWriterRefCenter.current.innerHTML += txt.charAt(i);
+        } catch (err) {
+          console.log(err);
+        }
 
         i++;
         setTimeout(typeWriter, speed);
@@ -59,7 +63,7 @@ const Map = ({
         } else {
           // setShowMap(true);
           // textContainerRef.current.className = "hide";
-          enterButton.current.style.display = "block";
+          if (enterButton.current) enterButton.current.style.display = "block";
         }
       }
     }
