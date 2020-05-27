@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1139158cc12efec34f2a67ca33e40f3",
+    "revision": "8822a7971d7a7f0167c623b8c7cf005c",
     "url": "/index.html"
   },
   {
-    "revision": "5b152b49db49a6a4947b",
-    "url": "/static/css/main.804857a0.chunk.css"
+    "revision": "8a466ea24a9052487d0b",
+    "url": "/static/css/main.225c4069.chunk.css"
   },
   {
-    "revision": "c98601cf31292f3f2afc",
-    "url": "/static/js/2.527fe184.chunk.js"
+    "revision": "9d4e5ed22ba0a72689e3",
+    "url": "/static/js/2.26e427ad.chunk.js"
   },
   {
     "revision": "0d10b9de47c8023f7fd9d830b32d5242",
-    "url": "/static/js/2.527fe184.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.26e427ad.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b152b49db49a6a4947b",
-    "url": "/static/js/main.c4b40724.chunk.js"
+    "revision": "8a466ea24a9052487d0b",
+    "url": "/static/js/main.e7158b01.chunk.js"
   },
   {
     "revision": "a4464e36652c66d97f1c",
@@ -108,16 +108,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/UoM_logo.5ce5fc8f.svg"
   },
   {
+    "revision": "9c5fbed46b7362cca987cc805b5e68e8",
+    "url": "/static/media/arrow_back.9c5fbed4.svg"
+  },
+  {
+    "revision": "8165c7b521f77f932a747ac66bd540c8",
+    "url": "/static/media/arrow_back_white.8165c7b5.svg"
+  },
+  {
+    "revision": "a7af97f27005c834862d6c302b8d5728",
+    "url": "/static/media/arrow_forward.a7af97f2.svg"
+  },
+  {
     "revision": "8d47e0bb8b62fd3c3d9528272b1c4a0b",
     "url": "/static/media/info.8d47e0bb.svg"
-  },
-  {
-    "revision": "ae0516300b13de0ac7f8697cff41766e",
-    "url": "/static/media/keyboard_return.ae051630.svg"
-  },
-  {
-    "revision": "65ffc3bbc2e161d7508e05d475518444",
-    "url": "/static/media/keyboard_return_white.65ffc3bb.svg"
   },
   {
     "revision": "0db86d683a8b1780f7564fc54faa6796",
