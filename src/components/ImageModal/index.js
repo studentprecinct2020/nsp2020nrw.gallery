@@ -38,9 +38,9 @@ const Modal = ({ match }) => {
         imgRef.current.style.width =
           (containerHeight - hPadding) * aspect + "px";
       } else {
-        imgRef.current.style.marginTop = `${
-          (containerHeight - resizedHeight) / 2
-        }px`;
+        // imgRef.current.style.marginTop = `${
+        //   (containerHeight - resizedHeight) / 2
+        // }px`;
       }
 
       setTimeout(() => (imgRef.current.style.opacity = 1), 100);
