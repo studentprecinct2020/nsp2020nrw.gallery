@@ -14,6 +14,7 @@ const Modal = ({ match }) => {
   const [loadingImg, setLoadingImg] = useState(true);
   const [imgSrc, setImgSrc] = useState("");
   const imgRef = useRef();
+  const infoRef = useRef();
 
   const path = match.params.img;
   let index;
@@ -42,7 +43,9 @@ const Modal = ({ match }) => {
         //   (containerHeight - resizedHeight) / 2
         // }px`;
       }
-
+      // console.log(document.querySelector("img").height);
+      // infoRef.current.style.height = 100 + "px";
+      // console.log(infoRef.current);
       setTimeout(() => (imgRef.current.style.opacity = 1), 100);
     });
   }, [index]);
@@ -76,18 +79,22 @@ const Modal = ({ match }) => {
             </div>
             <div className="description">
               <div className="header">
-                {info.artist}. {info.title} ({info.year}), digital image,
-                1650x700cm
+                {info.artist}. {info.title} ({info.year}), {info.format},{" "}
+                {info.dimensions}
               </div>
-              <div className="info" style={{ fontSize: fontSize() }}>
+              <div
+                className="info"
+                style={{ fontSize: fontSize() }}
+                ref={infoRef}
+              >
                 {info.description}
               </div>
+              <Link to="/">
+                <div className={`close-modal ${info.title}`}>
+                  <BackIcon />
+                </div>
+              </Link>
             </div>
-            <Link to="/">
-              <div className="close-modal">
-                <BackIcon />
-              </div>
-            </Link>
           </div>
         )}
       </div>

@@ -7,19 +7,7 @@ import volOff from "../../assets/icons/vol_off.svg";
 import music from "../../assets/audio/music.mp3";
 import UoMLogo from "../UoMLogo";
 
-const Heading = ({ history, playMusic, setPlayMusic }) => {
-  const [musicOn, setMusicOn] = useState(false);
-  const audioRef = useRef();
-  const toggleMusic = () => setPlayMusic(!playMusic);
-
-  useEffect(() => {
-    if (playMusic) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
-  }, [playMusic]);
-
+const Heading = ({ history, playMusic, toggleMusic }) => {
   return (
     <div className="heading">
       <div
@@ -41,7 +29,6 @@ const Heading = ({ history, playMusic, setPlayMusic }) => {
         <div onClick={toggleMusic} style={{ cursor: "pointer" }}>
           {!playMusic ? <img src={volOff} /> : <img src={volUp} />}
         </div>
-        <audio ref={audioRef} src={music} />
       </div>
     </div>
   );

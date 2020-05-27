@@ -12,8 +12,17 @@ export const loadedImages = images.map((i) => {
   return { img, path: iData[i].path };
 });
 
-const ackText = `We acknowledge the Kulin Nations as sovereign custodians of the lands on which this virtual gallery emerged, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples. We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people.`;
-const Map = ({ setGallery, setPlayMusic }) => {
+const ackText = `Contributing artists and the University of Melbourne community acknowledge the Kulin Nations as sovereign custodians of the lands on which this virtual gallery was created, of the Wurundjeri, Boon Wurrung, Yorta Yorta and Dja Dja Wurrung peoples.
+We extend our respects to ancestors and Elders past, present and emerging, and to all First Nations people. 
+`;
+const Map = ({
+  entryWindow,
+  history,
+  location,
+  setEntryWindow,
+  setGallery,
+  setPlayMusic,
+}) => {
   // const [startAnimating, setStartAnimating] = useState(false);
   const [showMap, setShowMap] = useState(false);
 
@@ -59,7 +68,7 @@ const Map = ({ setGallery, setPlayMusic }) => {
 
   const enter = () => {
     setShowMap(true);
-    setPlayMusic(true);
+    // setPlayMusic(true);
     textContainerRef.current.className = "hide";
   };
 
@@ -68,9 +77,9 @@ const Map = ({ setGallery, setPlayMusic }) => {
   //     setTimeout(() => setStartAnimating(true), 1000);
   //   }
   // }, [showMap]);
-
+  console.log("render");
   return (
-    <div className="map-container">
+    <div className="map-container" style={{ opacity: entryWindow ? 0 : 1 }}>
       <div style={{ display: showMap ? "block" : "none" }}>
         {/* <MapArea startAnimating={startAnimating} setGallery={setGallery} /> */}
         <div className="lottie-container">
@@ -81,9 +90,13 @@ const Map = ({ setGallery, setPlayMusic }) => {
                 {
                   eventName: "complete",
                   callback: () => {
-                    setGallery(true);
-                    document.querySelector(".map-container").style.display =
-                      "none";
+                    // setTimeout(() => {
+                    // setGallery(true);
+                    history.push("/entrance");
+                    setEntryWindow(true);
+                    // document.querySelector(".map-container").style.display =
+                    //   "none";
+                    // }, 1000);
                   },
                 },
               ]}

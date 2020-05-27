@@ -6,7 +6,7 @@
     "three six eight nine ten"; */
   width: 0%;
   opacity: 0%;
-  transition: width 2s, opacity 1s, top 2s, left 2s;
+  transition: opacity 2s, top 2s, left 2s;
   /* position: absolute;
   top: 63%;
   left: 60%; */
@@ -20,8 +20,10 @@
   top: 23%;
   left: -1000px; */
   pointer-events: none;
-  overflow-x: hidden;
+  overflow: visible;
   position: relative;
+  /* margin-top: 200px; */
+  z-index: 0;
 }
 
 .gallery-container img:hover {
@@ -81,7 +83,7 @@
     width: 0%;
     height: 100%;
     opacity: 0%;
-    transition: width 2s, opacity 1s, top 2s, left 2s;
+    transition: opacity 1s, top 2s, left 2s;
     /* position: absolute; */
     top: 0;
     left: 0;
@@ -90,7 +92,10 @@
     position: relative;
     /* display: flex; */
     overflow: auto;
-    margin-top: 100px;
+    overflow-y: hidden;
+    z-index: 0;
+    /* margin-top: 100px; */
+    /* padding-left: 10px; */
   }
   .image-wrap {
     height: 100%;

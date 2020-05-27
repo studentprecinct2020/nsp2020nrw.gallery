@@ -1,6 +1,7 @@
 .map-container {
   background-color: none;
   overflow-y: hidden;
+  transition: opacity 1s;
 }
 
 .map-container > img:hover {
@@ -46,9 +47,10 @@
   border: 5px outset #eaeaea;
   box-shadow: 7px 5px 6px 1px rgba(2, 2, 2, 0.3);
   font-weight: 700;
-  font-style: italic;
+  /* font-style: italic; */
   padding: 1px;
   font-size: 25px;
+  line-height: 40px;
 }
 
 .tw-container.center {

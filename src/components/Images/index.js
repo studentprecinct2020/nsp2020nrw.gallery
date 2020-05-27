@@ -19,6 +19,8 @@ const imagePositions = {
   10: { left: 0, top: 640 },
 };
 
+const galleryWidth = 1690;
+
 const Images = ({ history, modalOpen, show }) => {
   useEffect(() => {
     if (!show) return;
@@ -29,30 +31,40 @@ const Images = ({ history, modalOpen, show }) => {
     if (window.innerWidth > 768) {
       console.log(window.innerWidth);
       // gallery.style.width = "80%";
-      gallery.style.width = "1690px";
+      gallery.style.width = `${galleryWidth}px`;
       // gallery.style.top = "23%";
       // gallery.style.left = window.innerWidth < 768 ? "0" : "4%";
       // gallery.style.left = "-1000px";
-      gallery.style.transform = "translate(-200px,0px)";
+      gallery.style.transform = "translate(-79.7462px, -33.1903px)";
       gallery.style.height = window.innerHeight + "px";
+
+      const getNorm = (c) => ({
+        x: (c.x / window.innerWidth - 0.5) * -2,
+        y: (c.y / window.innerHeight - 0.5) * -2,
+      });
 
       let interval;
       let cursorX = 0;
       let cursorY = 0;
-      let decay = 1;
+      let decay = 2;
+      let velocity = 0;
       const moveGallery = () => {
         clearInterval(interval);
         const cx = gallery.style.transform.split("(")[1].split("px")[0];
         const cy = gallery.style.transform.split("px,")[1].split(")")[0];
-        let newTranslateX = parseInt(cx) + (cursorX * 5) / decay;
-        let newTranslateY = parseInt(cy) + (cursorY * 5) / decay;
-        if (newTranslateX > 30) newTranslateX = 30;
-        if (newTranslateX < -370) newTranslateX = -370;
+        //velocity = Math.abs(cursorX - cx);
+        //console.log(getNorm({ x: parseInt(cx), y: parseInt(cy) }));
+        const maxX = galleryWidth - window.innerWidth - 150;
+        // const maxY = window.innerHeight -
+
+        let newTranslateX = parseInt(cx) + cursorX * Math.PI * 2 * 2 - decay;
+        let newTranslateY = parseInt(cy) + cursorY * Math.PI * 2 * 2 - decay;
+        if (newTranslateX > 50) newTranslateX = 50;
+        if (newTranslateX < -maxX) newTranslateX = -maxX;
         if (newTranslateY > 0) newTranslateY = 0;
         if (newTranslateY < -90) newTranslateY = -90;
         gallery.style.transform = `translate(${newTranslateX}px, ${newTranslateY}px)`;
-
-        // decay += 0.01;
+        decay = decay < 0.5 ? 0.5 : decay - 0.1;
         interval = setInterval(moveGallery, 10);
       };
 
@@ -71,7 +83,7 @@ const Images = ({ history, modalOpen, show }) => {
       window.addEventListener("mousemove", checkCursor);
       document.body.addEventListener("mouseenter", startScrolling);
       gallery.addEventListener("mouseleave", stopScrolling);
-
+      window.onclick = () => console.log("WTF");
       // const images = document.getElementsByTagName("img");
       // for (let i = 0; i < images.length; i++) {
       //   images[i].addEventListener("mouseenter", stopScrolling);
@@ -79,46 +91,58 @@ const Images = ({ history, modalOpen, show }) => {
       // }
     } else {
       gallery.style.width = "100%";
-      gallery.style.height = window.innerHeight / 2 + "px";
+      gallery.style.height = window.innerHeight + "px";
     }
   }, [show]);
 
   const displayType = window.innerWidth < 768 ? "grid" : "flex";
   return (
-    <div
-      className="gallery-container"
-      style={{ display: modalOpen ? "none" : displayType }}
-    >
-      {loadedImages.map((img, i) => {
-        let { left, top } = imagePositions[i];
-        if (window.innerWidth < 768) {
-          left = 0;
-          top = 0;
-        }
-        img.img.onload = () => console.log(img.img.width);
-        return (
-          <div
-            onClick={() => history.push(`/${img.path}`)}
-            style={{
-              // gridArea: `${numMap[i + 1]}`,
-              gridRow: 1,
-              marginBottom: "20px",
-              // transform: `translateY(${getRandomInt(-100, 100)}px)`,
-              left,
-              top,
-            }}
-            key={`${i}image`}
-            className="image-wrap"
-          >
-            <img
-              style={{ cursor: `url(${eye}),auto` }}
-              id={`${i}image`}
-              src={img.img.src}
-              alt="oops"
-            ></img>
-          </div>
-        );
-      })}
+    <div style={{ margin: 10 }}>
+      <div
+        onClick={() => console.log("container")}
+        className="gallery-container"
+        style={{ display: modalOpen ? "none" : displayType }}
+      >
+        {loadedImages.map((img, i) => {
+          let { left, top } = imagePositions[i];
+          let marginTop = 0;
+          if (window.innerWidth < 768) {
+            left = 0;
+            top = 0;
+            marginTop = getRandomInt(
+              0,
+              window.innerHeight / (((i + 0) % 3) + 1.9)
+            );
+          }
+          return (
+            <div
+              onClick={() => {
+                history.push(`/${img.path}`);
+                console.log("LCICK");
+              }}
+              style={{
+                // gridArea: `${numMap[i + 1]}`,
+                gridRow: 1,
+                marginBottom: "20px",
+                // transform: `translateY(${getRandomInt(-100, 100)}px)`,
+                left,
+                top,
+                marginTop,
+              }}
+              key={`${i}image`}
+              className="image-wrap"
+            >
+              <img
+                onClick={() => console.log("whAT")}
+                style={{ cursor: `url(${eye}),auto` }}
+                id={`${i}image`}
+                src={img.img.src}
+                alt="oops"
+              ></img>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

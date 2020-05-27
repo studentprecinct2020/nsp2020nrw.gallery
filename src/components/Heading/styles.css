@@ -12,6 +12,7 @@
   color: white;
   user-select: none;
   justify-content: space-between;
+  z-index: 9999;
 }
 
 .heading-outer {
@@ -37,7 +38,7 @@
 
 .umlogo-heading {
   width: 72px;
-  margin: 6px 24px;
+  margin: 6px 24px 1px;
   cursor: pointer;
 }
 .header-container > marquee {
