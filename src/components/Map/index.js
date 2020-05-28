@@ -4,7 +4,7 @@ import "./styles.css";
 import MapArea from "./MapArea";
 import animationData from "../../assets/animations/mapAnimation.json";
 import iData from "../../components/ImageModal/descriptions.json";
-const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const images = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 export const loadedImages = images.map((i) => {
   const src = require(`../../assets/imgs/${i}-smoll.jpg`);
   const img = new Image();

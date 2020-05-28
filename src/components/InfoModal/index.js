@@ -21,8 +21,8 @@ const Modal = ({ history, match, setGallery, setPlayMusic, type = "info" }) => {
       setTimeout(() => {
         infoModal.style.width = window.innerWidth > 768 ? "937px" : "100%";
         infoModal.style.height = window.innerWidth > 768 ? "82.2%" : "100%";
-        infoModal.style.left = window.innerWidth > 768 ? "4%" : "0%";
-        infoModal.style.top = window.innerWidth > 768 ? "6%" : "0%";
+        infoModal.style.left = window.innerWidth > 768 ? "50%" : "0%";
+        infoModal.style.top = window.innerWidth > 768 ? "50%" : "0%";
         setTimeout(() => {
           infoBody.style.opacity = 1;
           logoWrapper.style.opacity = 1;
@@ -36,70 +36,7 @@ const Modal = ({ history, match, setGallery, setPlayMusic, type = "info" }) => {
     <div className={`info-modal ${type}`}>
       <div className="info-body" style={{ opacity: type === "info" && 1 }}>
         <div className="info-text">
-          {type === "entrance" ? (
-            <OpeningText />
-          ) : (
-            <div>
-              <p>
-                The New Student Precinct Project at The University of Melbourne
-                is proud to present this National Reconciliation Week 2020
-                Virtual Gallery. This gallery has been curated and designed by
-                Bachelor of Environments student Cristina Margherita Napoleone
-                and features the works of eight staff, students and alumni who
-                submitted images and artworks in response to this year’s theme
-                <i> in this together.</i>
-              </p>
-              <p>
-                To be <i> in this together</i>
-                is to not shy away from our grief, nor our remorse. Art can help
-                us grow through grief and amplify compassion that compels us to
-                love more and recognise a deeper kinship, toward one another and
-                our shared more-than-human world.
-              </p>
-              <p>
-                This year marks the twentieth anniversary of the reconciliation
-                walks of 2000, when people from all backgrounds came together to
-                walk across the nation and show their support for a more
-                reconciled Australia. While many steps have been taken, many
-                steps remain as we learn our shared story.
-              </p>
-              <p>
-                This annual National Reconciliation Week themed gallery,
-                presented by the University of Melbourne’s New Student Precinct
-                Project, serves as a platform of active support by the
-                University community, both Indigenous and non-Indigenous, to
-                showcase artworks that express reflections in the spirit of
-                reconciliation to honour the oldest living culture on Earth.
-              </p>
-              <p>
-                <i>Biik Ngarrga</i> and <i>Buln Buln Ngarrga</i> were written
-                and performed by Mandy Nicholson live with the Djirri Djirri
-                Dancers at The University of Melbourne in April 2019.{" "}
-                <i>Biik Ngarrga</i> is a Wurundjeri song used to teach wider
-                communities about the six interconnected layers of Country:
-                Biik-ut (Below Country), Biik-dui (On Country), Baanj Biik
-                (Water Country), Murnmut Biik (Wind Country), Wurru wurru Biik
-                (Sky Country) and Tharangalk Biik (Star Country).{" "}
-                <i>Buln Buln Ngarrga</i> is also a Wurundjeri song that honours
-                the lyrebird, known for their expert mimicry of surrounding
-                sounds, both human and non-human.
-              </p>
-              <p>
-                The Outdoor Gallery, originally located in Porter's Lane at the
-                back of the ERC Library and now for the first time digitally,
-                seeks to provide the University of Melbourne community with a
-                creative space that references the energy and activity of
-                Melbourne’s creative laneway culture.
-              </p>
-              <p>
-                Since the launch of the gallery in May 2017, exhibitors have
-                included Science Gallery Melbourne, Wilin Centre for Indigenous
-                Arts and Cultural Development, University of Melbourne’s Student
-                Union, Murrup Barak Melbourne Institute for Indigenous
-                Development, Nite Art, and Farrago Magazine.
-              </p>
-            </div>
-          )}
+          <OpeningText />
         </div>
         {type === "entrance" && (
           <div
@@ -108,6 +45,7 @@ const Modal = ({ history, match, setGallery, setPlayMusic, type = "info" }) => {
               history.push("/");
               setGallery(true);
               setPlayMusic(true);
+              document.querySelector("audio").play();
             }}
           >
             <img src={arrowForward} />
