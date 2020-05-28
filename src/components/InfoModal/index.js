@@ -44,8 +44,8 @@ const Modal = ({ history, match, setGallery, setPlayMusic, type = "info" }) => {
             onClick={() => {
               history.push("/");
               setGallery(true);
-              setPlayMusic(true);
-              document.querySelector("audio").play();
+              // setPlayMusic(true);
+              // document.querySelector("audio").play();
             }}
           >
             <img src={arrowForward} />

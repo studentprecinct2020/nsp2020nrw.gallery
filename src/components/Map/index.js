@@ -72,7 +72,8 @@ const Map = ({
 
   const enter = () => {
     setShowMap(true);
-    // setPlayMusic(true);
+    setPlayMusic(true);
+    document.querySelector("audio").play();
     textContainerRef.current.className = "hide";
   };
 
