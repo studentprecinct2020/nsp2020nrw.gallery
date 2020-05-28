@@ -15,11 +15,16 @@
   min-height: 500px;
   margin: 31px auto;
   position: relative;
+  position: absolute;
+  height: 82.2%;
+  left: 2%;
+  top: 6%;
+  max-height: 620px;
 }
 
 .modal-wrap {
   border: 5px outset #eaeaea;
-  /* height: 99.2%; */
+  height: 99.2%;
 }
 
 .view-pane {

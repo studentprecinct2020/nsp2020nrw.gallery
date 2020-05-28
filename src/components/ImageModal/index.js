@@ -79,8 +79,8 @@ const Modal = ({ match }) => {
             </div>
             <div className="description">
               <div className="header">
-                {info.artist}. {info.title} ({info.year}), {info.format},{" "}
-                {info.dimensions}
+                {info.artist}, <i>{info.title}</i>, {info.year}, {info.format},{" "}
+                {info.dimensions}.
               </div>
               <div
                 className="info"

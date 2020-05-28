@@ -26,7 +26,10 @@ const Heading = ({ history, playMusic, toggleMusic }) => {
           src={infoSVG}
           onClick={() => history.push("/info")}
         />
-        <div onClick={toggleMusic} style={{ cursor: "pointer" }}>
+        <div
+          onClick={toggleMusic}
+          style={{ cursor: "pointer", marginTop: "1%" }}
+        >
           {!playMusic ? <img src={volOff} /> : <img src={volUp} />}
         </div>
       </div>

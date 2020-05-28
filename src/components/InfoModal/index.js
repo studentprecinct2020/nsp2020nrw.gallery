@@ -13,16 +13,16 @@ const Modal = ({ history, match, setGallery, setPlayMusic, type = "info" }) => {
     const infoBody = document.querySelector(".info-body");
     const logoWrapper = document.querySelector(".logo-wrapper");
 
-    if (window.innerWidth > window.innerHeight * 2) {
+    if (window.innerHeight > window.innerWidth) {
       infoModal.style.overflow = "auto";
     }
 
     if (type === "entrance") {
       setTimeout(() => {
-        infoModal.style.width = window.innerWidth > 768 ? "100%" : "100%";
-        infoModal.style.height = window.innerWidth > 768 ? "100%" : "100%";
-        infoModal.style.left = "0px";
-        infoModal.style.top = "0px";
+        infoModal.style.width = window.innerWidth > 768 ? "937px" : "100%";
+        infoModal.style.height = window.innerWidth > 768 ? "82.2%" : "100%";
+        infoModal.style.left = window.innerWidth > 768 ? "4%" : "0%";
+        infoModal.style.top = window.innerWidth > 768 ? "6%" : "0%";
         setTimeout(() => {
           infoBody.style.opacity = 1;
           logoWrapper.style.opacity = 1;

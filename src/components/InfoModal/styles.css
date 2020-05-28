@@ -14,24 +14,29 @@
   /* height: 637px; */
   /* margin: 40px auto; */
   padding-bottom: 20px;
-
   position: absolute;
   width: 0;
   height: 0;
-  left: 255px;
-  top: 358px;
+  left: 722px;
+  top: 449px;
   transition: height 3s, width 3s, left 2s, top 2s;
   overflow-y: auto;
   padding-bottom: 20px;
-  font-size: 1.3vw;
+  font-size: 11.9px;
   overflow: hidden;
+  width: 937px;
+  height: 82.2%;
+  left: 4%;
+  top: 6%;
+  max-height: 620px;
 }
 
 .info-modal.info {
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
+  /* width: 100%;
+  height: 100%; */
+  /* left: 0px;
+  top: 0px; */
+  font-size: 11px;
 }
 
 .info-body {
@@ -61,8 +66,8 @@
   position: absolute;
   /* right: 0px;
   bottom: -9px; */
-  right: 190px;
-  bottom: 120px;
+  right: 176px;
+  bottom: 160px;
 }
 
 .arrow-forward {
@@ -96,6 +101,12 @@ a {
     width: 100%;
     height: 100%;
     font-size: 2.5vw;
+  }
+
+  .info-modal {
+    left: 0;
+    top: 0;
+    max-height: 100%;
   }
 
   .info-modal.info {

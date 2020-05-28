@@ -1,7 +1,7 @@
 .map-container {
   background-color: none;
   overflow-y: hidden;
-  transition: opacity 1s;
+  transition: opacity 5s;
 }
 
 .map-container > img:hover {
@@ -89,7 +89,7 @@
   top: 70px;
   position: absolute;
   pointer-events: none;
-  transition: opacity 1s;
+  transition: opacity 10s;
 }
 
 .map-area.hide {
