@@ -62,7 +62,7 @@ const Main = ({ history, location }) => {
         />
       )}
       <Images modalOpen={modalOpen} show={gallery} />
-      <audio ref={audioRef} src={music} loop={true} />
+      <audio ref={audioRef} loop={true} src={music} />
     </div>
   );
 };

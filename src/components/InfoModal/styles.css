@@ -15,8 +15,33 @@
   color: black;
   font-size: 20px;
   border: 3px solid black;
+<<<<<<< HEAD
   width: 937px;
   height: 637px;
+=======
+  width: 100%;
+  /* height: 637px; */
+  /* margin: 40px auto; */
+  padding-bottom: 20px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 722px;
+  top: 449px;
+  transition: height 3s, width 3s, left 2s, top 2s;
+  overflow-y: auto;
+  padding-bottom: 20px;
+  font-size: 12.9px;
+  overflow: hidden;
+  width: 937px;
+  height: 82.2%;
+  /* left: 4%;
+  top: 6%; */
+  max-height: 620px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+>>>>>>> feature-final
 }
 
 .info-modal.info {
@@ -24,7 +49,11 @@
   height: 100%; */
   /* left: 0px;
   top: 0px; */
-  font-size: 11px;
+  font-size: 12.9px;
+}
+
+.sub-heading {
+  font-size: 15px;
 }
 
 .info-body {
@@ -38,6 +67,7 @@
   padding: 11%;
   user-select: none;
   padding-top: 34px;
+  padding-bottom: 22px;
 }
 
 .logo-wrapper {
@@ -89,6 +119,7 @@ a {
     width: 100%;
     height: 100%;
     font-size: 2.5vw;
+    transform: translate(0%, 0%);
   }
 
   .info-modal {
