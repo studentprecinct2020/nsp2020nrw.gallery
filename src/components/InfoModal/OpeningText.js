@@ -35,7 +35,7 @@ const OpeningText = () => {
         story.
       </p>
       <p>
-        <span className="sub-heading">GALLERY MUSIC</span>
+        <div className="sub-heading">GALLERY MUSIC</div>
         <br />
         <i>Biik Ngarrga</i> and <i>Buln Buln Ngarrga</i> were written and
         performed by Mandy Nicholson live with the Djirri Djirri Dancers at The

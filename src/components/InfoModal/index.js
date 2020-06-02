@@ -54,12 +54,12 @@ const Modal = ({ history, match, setGallery, setPlayMusic, type = "info" }) => {
         <div className="logo-wrapper" style={{ opacity: type === "info" && 1 }}>
           <UoMLogo />
         </div>
-        <div
+        {/* <div
           className="logo-wrapper"
           style={{ opacity: 0, height: 47, width: 10 }}
         >
           <UoMLogo />
-        </div>
+        </div> */}
         {type === "info" && (
           <div style={{ position: "relative" }}>
             <div className="back-wrapper">

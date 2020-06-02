@@ -22,8 +22,8 @@
   transition: height 3s, width 3s, left 2s, top 2s;
   overflow-y: auto;
   padding-bottom: 20px;
-  font-size: 12.9px;
-  overflow: hidden;
+  font-size: 20px;
+  overflow: auto;
   width: 937px;
   height: 82.2%;
   /* left: 4%;
@@ -39,11 +39,12 @@
   height: 100%; */
   /* left: 0px;
   top: 0px; */
-  font-size: 12.9px;
+  /* font-size: 12.9px; */
 }
 
 .sub-heading {
-  font-size: 15px;
+  margin-bottom: -17px;
+  font-size: 18px;
 }
 
 .info-body {
@@ -67,6 +68,7 @@
   opacity: 0;
   transition: opacity 1s;
   margin-bottom: 52px;
+  margin-top: 15px;
   overflow: visible;
 }
 
@@ -74,8 +76,9 @@
   position: absolute;
   /* right: 0px;
   bottom: -9px; */
-  right: 176px;
-  bottom: 160px;
+
+  right: 76px;
+  bottom: 46px;
 }
 
 .arrow-forward {
@@ -90,6 +93,27 @@
 a {
   color: white;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #094183;
+}
+
 @media screen and (max-width: 768px) {
   .info-modal {
     position: fixed;
@@ -108,7 +132,7 @@ a {
     border: 3px solid black;
     width: 100%;
     height: 100%;
-    font-size: 2.5vw;
+    font-size: 4vw;
     transform: translate(0%, 0%);
   }
 
@@ -125,11 +149,16 @@ a {
     top: 0px;
   }
 
+  .sub-heading {
+    font-size: 3.4vw;
+    margin-bottom: -15px;
+  }
+
   .back-wrapper {
     position: absolute;
     /* right: -2px;
     bottom: 32px; */
-    right: 13px;
-    bottom: 122px;
+    right: -6px;
+    bottom: 46px;
   }
 }
